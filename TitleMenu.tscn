@@ -1,0 +1,357 @@
+[gd_scene load_steps=20 format=2]
+
+[ext_resource path="res://assests/fonts/04B_30__.TTF" type="DynamicFontData" id=1]
+[ext_resource path="res://assests/enemy/type1/Idle/frame-1.png" type="Texture" id=2]
+[ext_resource path="res://assests/Characters/platformChar_idle.png" type="Texture" id=3]
+[ext_resource path="res://assests/coins/Gold/Gold_1.png" type="Texture" id=4]
+[ext_resource path="res://assests/menu/PNG/grey_button00.png" type="Texture" id=5]
+[ext_resource path="res://assests/menu/PNG/grey_button09.png" type="Texture" id=6]
+[ext_resource path="res://PlayButton.gd" type="Script" id=7]
+[ext_resource path="res://assests/music/A Bit Of Hope-AudioConverter.ogg" type="AudioStream" id=8]
+[ext_resource path="res://assests/fonts/BalsamiqSans-Bold.ttf" type="DynamicFontData" id=9]
+
+[sub_resource type="DynamicFont" id=1]
+size = 100
+font_data = ExtResource( 1 )
+
+[sub_resource type="StyleBoxFlat" id=2]
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+
+[sub_resource type="StyleBoxFlat" id=3]
+bg_color = Color( 0.0117647, 0, 0, 0.521569 )
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+
+[sub_resource type="DynamicFont" id=4]
+font_data = ExtResource( 1 )
+
+[sub_resource type="DynamicFont" id=5]
+size = 30
+font_data = ExtResource( 1 )
+
+[sub_resource type="DynamicFont" id=6]
+font_data = ExtResource( 1 )
+
+[sub_resource type="DynamicFont" id=7]
+font_data = ExtResource( 1 )
+
+[sub_resource type="DynamicFont" id=8]
+size = 23
+font_data = ExtResource( 1 )
+
+[sub_resource type="DynamicFont" id=9]
+size = 60
+font_data = ExtResource( 1 )
+
+[sub_resource type="DynamicFont" id=10]
+size = 20
+font_data = ExtResource( 9 )
+
+[node name="TitleMenu" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ColorRect" type="ColorRect" parent="."]
+margin_right = 1024.0
+margin_bottom = 600.0
+color = Color( 0.937255, 0, 0, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="."]
+margin_left = 195.341
+margin_top = 43.0377
+margin_right = 881.341
+margin_bottom = 161.038
+custom_fonts/font = SubResource( 1 )
+text = "GameBoy "
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label2" type="Label" parent="."]
+margin_left = 91.5134
+margin_top = 129.914
+margin_right = 923.513
+margin_bottom = 247.914
+custom_fonts/font = SubResource( 1 )
+text = "Adventures"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Panel3" type="Panel" parent="."]
+modulate = Color( 0, 0, 0, 0.439216 )
+margin_left = 792.0
+margin_top = 7.0
+margin_right = 993.0
+margin_bottom = 48.0
+custom_styles/panel = SubResource( 2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Panel" type="Panel" parent="."]
+margin_left = 22.5243
+margin_top = 383.438
+margin_right = 497.524
+margin_bottom = 622.438
+rect_scale = Vector2( 0.817973, 0.817973 )
+custom_styles/panel = SubResource( 3 )
+__meta__ = {
+"_edit_group_": true,
+"_edit_use_anchors_": false
+}
+
+[node name="TextureRect" type="TextureRect" parent="Panel"]
+margin_left = 27.5352
+margin_top = 177.098
+margin_right = 219.535
+margin_bottom = 222.098
+rect_scale = Vector2( 0.836814, 0.827079 )
+texture = ExtResource( 5 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="Panel"]
+margin_left = 68.6884
+margin_top = 187.172
+margin_right = 143.688
+margin_bottom = 204.172
+custom_fonts/font = SubResource( 4 )
+custom_colors/font_color = Color( 0.0235294, 0, 0, 1 )
+text = "SPACE"
+
+[node name="Label2" type="Label" parent="Panel"]
+margin_left = 203.947
+margin_top = 181.168
+margin_right = 367.947
+margin_bottom = 212.168
+custom_fonts/font = SubResource( 5 )
+text = "= JUMP"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label3" type="Label" parent="Panel"]
+margin_left = 8.47571
+margin_top = 4.23788
+margin_right = 111.476
+margin_bottom = 21.2379
+rect_scale = Vector2( 1.75613, 2.1542 )
+custom_fonts/font = SubResource( 6 )
+custom_colors/font_color = Color( 0.713726, 0.713726, 0.223529, 1 )
+text = "controls"
+
+[node name="TextureRect2" type="TextureRect" parent="Panel"]
+margin_left = 22.2487
+margin_top = 59.3299
+margin_right = 62.2487
+margin_bottom = 99.3299
+texture = ExtResource( 6 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label4" type="Label" parent="Panel"]
+margin_left = 34.5544
+margin_top = 67.7996
+margin_right = 109.554
+margin_bottom = 84.7996
+rect_scale = Vector2( 1.58502, 1.67031 )
+custom_fonts/font = SubResource( 4 )
+custom_colors/font_color = Color( 0.0235294, 0, 0, 1 )
+text = "A"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label5" type="Label" parent="Panel"]
+margin_left = 84.4455
+margin_top = 71.5666
+margin_right = 248.446
+margin_bottom = 102.567
+rect_scale = Vector2( 0.693954, 0.693954 )
+custom_fonts/font = SubResource( 5 )
+text = "= left"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TextureRect3" type="TextureRect" parent="Panel"]
+margin_left = 394.187
+margin_top = 102.463
+margin_right = 443.187
+margin_bottom = 147.463
+texture = ExtResource( 6 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label6" type="Label" parent="Panel"]
+margin_left = 408.614
+margin_top = 110.933
+margin_right = 483.614
+margin_bottom = 127.933
+rect_scale = Vector2( 1.58502, 1.67031 )
+custom_fonts/font = SubResource( 4 )
+custom_colors/font_color = Color( 0.0235294, 0, 0, 1 )
+text = "D"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label7" type="Label" parent="Panel"]
+margin_left = 265.465
+margin_top = 115.407
+margin_right = 429.465
+margin_bottom = 146.407
+rect_scale = Vector2( 0.693954, 0.693954 )
+custom_fonts/font = SubResource( 5 )
+text = "right ="
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Panel2" type="Panel" parent="."]
+margin_left = 608.0
+margin_top = 384.0
+margin_right = 1083.0
+margin_bottom = 623.0
+rect_scale = Vector2( 0.817973, 0.817973 )
+custom_styles/panel = SubResource( 3 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label3" type="Label" parent="Panel2"]
+margin_left = 365.959
+margin_top = 1.6474
+margin_right = 468.959
+margin_bottom = 18.6474
+rect_scale = Vector2( 1.75613, 2.1542 )
+custom_fonts/font = SubResource( 6 )
+custom_colors/font_color = Color( 0.713726, 0.713726, 0.223529, 1 )
+text = "Info"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TextureRect" type="TextureRect" parent="Panel2"]
+margin_left = 18.1332
+margin_top = 34.9712
+margin_right = 114.133
+margin_bottom = 130.971
+rect_scale = Vector2( 0.760161, 0.808014 )
+texture = ExtResource( 3 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="Panel2"]
+margin_left = 97.4366
+margin_top = 74.9586
+margin_right = 164.437
+margin_bottom = 91.9586
+rect_scale = Vector2( 1.61694, 1.61694 )
+custom_fonts/font = SubResource( 7 )
+text = "= You"
+
+[node name="TextureRect2" type="TextureRect" parent="Panel2"]
+margin_left = 225.964
+margin_top = 58.1993
+margin_right = 620.964
+margin_bottom = 298.199
+rect_scale = Vector2( 0.188038, 0.23972 )
+texture = ExtResource( 2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label2" type="Label" parent="Panel2"]
+margin_left = 311.38
+margin_top = 76.1812
+margin_right = 378.38
+margin_bottom = 93.1812
+rect_scale = Vector2( 1.61694, 1.61694 )
+custom_fonts/font = SubResource( 7 )
+text = "= Enemy"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TextureRect3" type="TextureRect" parent="Panel2"]
+margin_left = 161.169
+margin_top = 154.779
+margin_right = 724.169
+margin_bottom = 718.779
+rect_scale = Vector2( 0.129892, 0.113954 )
+texture = ExtResource( 4 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label4" type="Label" parent="Panel2"]
+margin_left = 19.5521
+margin_top = 178.777
+margin_right = 153.552
+margin_bottom = 202.777
+custom_fonts/font = SubResource( 8 )
+text = "Collect"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label5" type="Label" parent="Panel2"]
+margin_left = 247.442
+margin_top = 180.0
+margin_right = 462.442
+margin_bottom = 204.0
+custom_fonts/font = SubResource( 8 )
+text = "X 50 to WIn"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="PlayButton" type="Button" parent="."]
+margin_left = 405.0
+margin_top = 266.0
+margin_right = 610.0
+margin_bottom = 333.0
+custom_fonts/font = SubResource( 9 )
+custom_colors/font_color = Color( 0.917647, 0.917647, 0.145098, 1 )
+custom_colors/font_color_pressed = Color( 0.0705882, 0.505882, 0.717647, 1 )
+text = "play"
+flat = true
+script = ExtResource( 7 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="MusicTitleScreen" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 8 )
+volume_db = -12.0
+autoplay = true
+
+[node name="Label3" type="Label" parent="."]
+margin_left = 798.0
+margin_top = 16.0
+margin_right = 1041.0
+margin_bottom = 40.0
+custom_fonts/font = SubResource( 10 )
+custom_colors/font_color = Color( 0.709804, 0.709804, 0.709804, 1 )
+text = "Created by Vishwa.R"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+[connection signal="pressed" from="PlayButton" to="PlayButton" method="_on_PlayButton_pressed"]
