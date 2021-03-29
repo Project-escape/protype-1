@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/SCREAM_4.wav-d48e78fe4d0522ba39eb0fe2871c2f31.sample"
+
+[deps]
+
+source_file="res://sounds/SCREAM_4.wav"
+dest_files=[ "res://.import/SCREAM_4.wav-d48e78fe4d0522ba39eb0fe2871c2f31.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0

@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/Hiccup+Hicough+3.wav-0bc3689d5f212e3d233b2b614f7c9aaa.sample"
+
+[deps]
+
+source_file="res://sounds/Hiccup+Hicough+3.wav"
+dest_files=[ "res://.import/Hiccup+Hicough+3.wav-0bc3689d5f212e3d233b2b614f7c9aaa.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0

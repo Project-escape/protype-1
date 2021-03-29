@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/wickedwitchlaugh.wav-033fe3136a64bb41aab69cec96a15fe3.sample"
+
+[deps]
+
+source_file="res://sounds/wickedwitchlaugh.wav"
+dest_files=[ "res://.import/wickedwitchlaugh.wav-033fe3136a64bb41aab69cec96a15fe3.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0
