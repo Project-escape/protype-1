@@ -9,7 +9,6 @@ Prototype with player controls , need to remove unwanted assests and script file
 1. Create a New Folder 
 2. Clone this repo there
 3. unzip the assests i emailed you guys.
-4. copy and paste the assests in the clone repo folder.
 
 
 Your file structure should be like , the screenshot below.
