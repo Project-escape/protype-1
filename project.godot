@@ -16,7 +16,7 @@ _global_script_class_icons={
 [application]
 
 config/name="Platformer"
-run/main_scene="res://scenes/room_default.tscn"
+run/main_scene="res://scenes/room_door_sample.tscn"
 config/icon="res://icon.png"
 
 [display]

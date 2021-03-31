@@ -1,37 +1,18 @@
-[gd_scene load_steps=23 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://script/enemy.gd" type="Script" id=1]
-[ext_resource path="res://assests/enemy/type1/Idle/frame-7.png" type="Texture" id=2]
-[ext_resource path="res://assests/enemy/type1/Idle/frame-9.png" type="Texture" id=3]
-[ext_resource path="res://assests/enemy/type1/Idle/frame-3.png" type="Texture" id=4]
-[ext_resource path="res://assests/enemy/type1/Idle/frame-10.png" type="Texture" id=5]
-[ext_resource path="res://assests/enemy/type1/stomped/frame-1.png" type="Texture" id=6]
-[ext_resource path="res://assests/enemy/type1/stomped/frame-5.png" type="Texture" id=7]
-[ext_resource path="res://assests/enemy/type1/stomped/frame-6.png" type="Texture" id=8]
-[ext_resource path="res://assests/enemy/type1/Idle/frame-2.png" type="Texture" id=9]
-[ext_resource path="res://assests/enemy/type1/stomped/frame-4.png" type="Texture" id=10]
-[ext_resource path="res://assests/enemy/type1/Idle/frame-8.png" type="Texture" id=11]
-[ext_resource path="res://assests/enemy/type1/stomped/frame-3.png" type="Texture" id=12]
-[ext_resource path="res://assests/enemy/type1/Idle/frame-1.png" type="Texture" id=13]
-[ext_resource path="res://assests/enemy/type1/Idle/frame-5.png" type="Texture" id=14]
-[ext_resource path="res://assests/enemy/type1/stomped/frame-2.png" type="Texture" id=15]
-[ext_resource path="res://assests/enemy/type1/Idle/frame-4.png" type="Texture" id=16]
-[ext_resource path="res://assests/enemy/type1/Idle/frame-6.png" type="Texture" id=17]
-[ext_resource path="res://sounds/sfx_sounds_impact10.wav" type="AudioStream" id=18]
-
-
 
 [sub_resource type="SpriteFrames" id=1]
 animations = [ {
-"frames": [ ExtResource( 13 ), ExtResource( 9 ), ExtResource( 4 ), ExtResource( 16 ), ExtResource( 14 ), ExtResource( 17 ), ExtResource( 2 ), ExtResource( 11 ), ExtResource( 3 ), ExtResource( 5 ) ],
-"loop": true,
-"name": "crawl",
-"speed": 7.0
-}, {
-"frames": [ ExtResource( 6 ), ExtResource( 15 ), ExtResource( 12 ), ExtResource( 10 ), ExtResource( 7 ), ExtResource( 8 ) ],
+"frames": [ null, null, null, null, null, null ],
 "loop": true,
 "name": "squashed",
 "speed": 5.0
+}, {
+"frames": [ null, null, null, null, null, null, null, null, null, null ],
+"loop": true,
+"name": "crawl",
+"speed": 7.0
 } ]
 
 [sub_resource type="RectangleShape2D" id=2]
@@ -52,7 +33,7 @@ script = ExtResource( 1 )
 scale = Vector2( 0.15, 0.15 )
 frames = SubResource( 1 )
 animation = "crawl"
-frame = 7
+frame = 3
 playing = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
@@ -87,7 +68,6 @@ wait_time = 0.5
 one_shot = true
 
 [node name="SoundSquash" type="AudioStreamPlayer" parent="."]
-stream = ExtResource( 18 )
 volume_db = -2.0
 [connection signal="body_entered" from="top_checker" to="." method="_on_top_checker_body_entered"]
 [connection signal="body_entered" from="sides_checker" to="." method="_on_sides_checker_body_entered"]

@@ -1,13 +1,14 @@
-extends Node2D
+extends Area2D
 
-onready var area: Area2D = $AreaDetector
 var closed = true
+var area_entered = false
 
-func _ready() -> void:
-	set_process(false)
+func _ready():
+	connect("body_entered", self, "body_entered")
+	connect("process", self, "_process")
 
-func _process(delta) -> void:
-		if Input.is_action_just_pressed("action"):
+func _process(delta):
+		if area_entered == true && Input.is_action_just_pressed("action"):
 			$Door.play()
 			if closed == true:
 				$StaticBody2D/CollisionShape2D.set_disabled(true)
@@ -18,11 +19,11 @@ func _process(delta) -> void:
 				$AnimatedSprite.play("close_door")
 				closed = true
 
-func _on_AreaDetector_body_entered(body):
+func body_entered(body):
 	print("yes")
-	set_process(true)
-
-
-func _on_AreaDetector_body_exited(body):
+	area_entered = true	
+	
+func body_exited(body):
 	print("no")
-	set_process(false)
+	area_entered = false
+
