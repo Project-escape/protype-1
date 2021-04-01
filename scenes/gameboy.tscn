@@ -48,7 +48,6 @@ animations = [ {
 extents = Vector2( 85.4746, 139.153 )
 
 [node name="gameboy" type="KinematicBody2D"]
-scale = Vector2( 2, 2 )
 script = ExtResource( 2 )
 
 [node name="Sprite" type="AnimatedSprite" parent="."]

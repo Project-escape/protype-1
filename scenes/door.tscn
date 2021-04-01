@@ -7,14 +7,14 @@
 
 [sub_resource type="SpriteFrames" id=1]
 animations = [ {
-"frames": [ ExtResource( 2 ), ExtResource( 3 ) ],
-"loop": false,
-"name": "close_door",
-"speed": 5.0
-}, {
 "frames": [ ExtResource( 3 ), ExtResource( 2 ) ],
 "loop": false,
 "name": "open_door",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 2 ), ExtResource( 3 ) ],
+"loop": false,
+"name": "close_door",
 "speed": 5.0
 } ]
 
