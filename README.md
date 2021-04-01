@@ -28,3 +28,8 @@ refer the below screenshot for assests structure.
 
 ## That's it 
 ## Import the project.godot file in Godot engine and start working.
+
+
+# NOTE:
+
+See latest version of README.md [here](https://github.com/Project-escape/prototype-1/blob/%235gun/README.md)
