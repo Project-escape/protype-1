@@ -1,7 +1,7 @@
 [gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://scenes/gameboy.tscn" type="PackedScene" id=1]
-[ext_resource path="res://assests/Environment/wall.png" type="Texture" id=2]
+[ext_resource path="res://assests/Environment/wall1.png" type="Texture" id=2]
 [ext_resource path="res://assests/Environment/background wall.png" type="Texture" id=3]
 [ext_resource path="res://scenes/door.tscn" type="PackedScene" id=4]
 
