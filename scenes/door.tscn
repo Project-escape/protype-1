@@ -51,6 +51,7 @@ stream = ExtResource( 4 )
 shape = SubResource( 3 )
 
 [node name="LightOccluder2D" type="LightOccluder2D" parent="."]
+visible = false
 occluder = SubResource( 4 )
 [connection signal="body_entered" from="AreaDetector" to="." method="_on_AreaDetector_body_entered"]
 [connection signal="body_exited" from="AreaDetector" to="." method="_on_AreaDetector_body_exited"]

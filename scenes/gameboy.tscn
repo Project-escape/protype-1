@@ -29,9 +29,9 @@ animations = [ {
 "name": "idle",
 "speed": 5.0
 }, {
-"frames": [ SubResource( 1 ), SubResource( 2 ), SubResource( 3 ) ],
+"frames": [ ExtResource( 6 ), ExtResource( 1 ), ExtResource( 6 ) ],
 "loop": true,
-"name": "walk",
+"name": "air",
 "speed": 5.0
 }, {
 "frames": [ ExtResource( 1 ) ],
@@ -39,9 +39,9 @@ animations = [ {
 "name": "jump",
 "speed": 5.0
 }, {
-"frames": [ ExtResource( 6 ), ExtResource( 1 ), ExtResource( 6 ) ],
+"frames": [ SubResource( 1 ), SubResource( 2 ), SubResource( 3 ) ],
 "loop": true,
-"name": "air",
+"name": "walk",
 "speed": 5.0
 } ]
 
@@ -55,8 +55,7 @@ script = ExtResource( 2 )
 [node name="Light2D" type="Light2D" parent="."]
 position = Vector2( 2, -1 )
 texture = ExtResource( 4 )
-texture_scale = 2.0
-energy = 0.8
+texture_scale = 1.5
 shadow_enabled = true
 
 [node name="Sprite" type="AnimatedSprite" parent="."]

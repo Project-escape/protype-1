@@ -33,6 +33,7 @@ position = Vector2( 143.74, 732.282 )
 position = Vector2( 1384.94, 351.942 )
 
 [node name="wall1" type="Sprite" parent="."]
+light_mask = 16
 position = Vector2( 766.1, 542.906 )
 texture = ExtResource( 1 )
 

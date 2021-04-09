@@ -11,6 +11,20 @@
 position = Vector2( 781, 64 )
 scale = Vector2( 0.8, 0.8 )
 
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="ColorRect" type="ColorRect" parent="CanvasLayer"]
+visible = false
+light_mask = 2
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_right = 8.0
+margin_bottom = -0.200073
+color = Color( 0.364706, 0.364706, 0.364706, 0.529412 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
 [node name="ParallaxBackground" type="ParallaxBackground" parent="."]
 
 [node name="Sprite" type="Sprite" parent="ParallaxBackground"]
@@ -41,8 +55,7 @@ position = Vector2( 6505.32, -146.694 )
 position = Vector2( 5187.63, -47.4583 )
 
 [node name="gameboy" parent="." instance=ExtResource( 5 )]
-position = Vector2( -17.5225, -3150.94 )
-scale = Vector2( 1, 1 )
+position = Vector2( -17.5225, -3129.69 )
 
 [node name="Camera2D" type="Camera2D" parent="gameboy"]
 current = true
