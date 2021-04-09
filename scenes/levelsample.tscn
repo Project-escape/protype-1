@@ -1,25 +1,25 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://scenes/rooms/room 2.tscn" type="PackedScene" id=1]
 [ext_resource path="res://scenes/rooms/room 1.tscn" type="PackedScene" id=2]
 [ext_resource path="res://scenes/rooms/room 4.tscn" type="PackedScene" id=3]
 [ext_resource path="res://scenes/rooms/room 3.tscn" type="PackedScene" id=4]
 [ext_resource path="res://scenes/gameboy.tscn" type="PackedScene" id=5]
+[ext_resource path="res://assests/Environment/background.png" type="Texture" id=6]
 
 [node name="LevelSample" type="Node2D"]
 position = Vector2( 781, 64 )
 scale = Vector2( 0.8, 0.8 )
 
-[node name="gameboy" parent="." instance=ExtResource( 5 )]
-position = Vector2( -112.766, -3135.07 )
-scale = Vector2( 1, 1 )
+[node name="ParallaxBackground" type="ParallaxBackground" parent="."]
 
-[node name="Camera2D" type="Camera2D" parent="gameboy"]
-current = true
-smoothing_enabled = true
+[node name="Sprite" type="Sprite" parent="ParallaxBackground"]
+position = Vector2( 959.279, 540.278 )
+texture = ExtResource( 6 )
 
 [node name="room3" parent="." instance=ExtResource( 1 )]
-position = Vector2( 2381.89, -93.1539 )
+position = Vector2( 2314.54, -177.338 )
+rotation = 0.0767945
 
 [node name="room4" parent="." instance=ExtResource( 3 )]
 position = Vector2( 486.637, -2889.18 )
@@ -29,14 +29,21 @@ position = Vector2( 493.865, -676.779 )
 
 [node name="room6" parent="." instance=ExtResource( 1 )]
 position = Vector2( 2396.26, -1922.71 )
-scale = Vector2( 1, 1 )
+rotation = 0.102974
 
 [node name="room7" parent="." instance=ExtResource( 4 )]
-position = Vector2( 841.258, 1863.16 )
-scale = Vector2( 1, 1 )
+position = Vector2( 4575.37, 1809.65 )
+
+[node name="room8" parent="." instance=ExtResource( 3 )]
+position = Vector2( 6505.32, -146.694 )
 
 [node name="room2" parent="." instance=ExtResource( 2 )]
-position = Vector2( 5324.49, -193.759 )
+position = Vector2( 5187.63, -47.4583 )
 
-[node name="room2" parent="room2" instance=ExtResource( 3 )]
-position = Vector2( 1406.78, -776.319 )
+[node name="gameboy" parent="." instance=ExtResource( 5 )]
+position = Vector2( -17.5225, -3150.94 )
+scale = Vector2( 1, 1 )
+
+[node name="Camera2D" type="Camera2D" parent="gameboy"]
+current = true
+smoothing_enabled = true
