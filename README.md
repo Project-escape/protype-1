@@ -32,4 +32,5 @@ refer the below screenshot for assests structure.
 
 # NOTE:
 
-See latest version of README.md [here](https://github.com/Project-escape/prototype-1/blob/%235gun/README.md)
++ See latest version of README.md [here](https://github.com/Project-escape/prototype-1/blob/%235gun/README.md)
++ Use `#5gun` for gun related works and use `main` branch for minor additions and modifications.
