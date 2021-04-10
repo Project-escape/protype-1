@@ -1,8 +1,8 @@
 extends Node2D
 
 onready var area: Area2D = $AreaDetector
-#var closed = false
-var closed = true
+#var closed = false  this thing also have minor bug 
+var closed = false
 
 func _ready() -> void:
 	set_process(false)

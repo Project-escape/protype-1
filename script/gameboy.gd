@@ -1,9 +1,9 @@
 extends KinematicBody2D
 var velocity = Vector2(0,0)
 var coins = 0
-const SPEED = 250
+const SPEED = 350
 const GRAVITY = 35
-const JUMPFORCE = -900
+const JUMPFORCE = -1500 
 func _physics_process(_delta):
 	if Input.is_action_pressed("right"):
 		velocity.x = SPEED
