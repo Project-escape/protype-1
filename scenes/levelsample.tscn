@@ -9,6 +9,7 @@
 [ext_resource path="res://scenes/football.tscn" type="PackedScene" id=7]
 
 [node name="LevelSample" type="Node2D"]
+modulate = Color( 0.294118, 0.294118, 0.294118, 1 )
 position = Vector2( 781, 64 )
 scale = Vector2( 0.8, 0.8 )
 
@@ -32,46 +33,54 @@ __meta__ = {
 position = Vector2( 959.279, 540.278 )
 texture = ExtResource( 6 )
 
-[node name="rooms" type="Node2D" parent="."]
-modulate = Color( 0, 0, 0.105882, 1 )
-
-[node name="room3" parent="rooms" instance=ExtResource( 1 )]
+[node name="room3" parent="." instance=ExtResource( 1 )]
 position = Vector2( 2314.54, -177.338 )
 rotation = 0.0767945
+scale = Vector2( 1, 1 )
 
-[node name="room4" parent="rooms" instance=ExtResource( 3 )]
+[node name="room4" parent="." instance=ExtResource( 3 )]
 position = Vector2( 486.637, -2889.18 )
+scale = Vector2( 1, 1 )
 
-[node name="room5" parent="rooms" instance=ExtResource( 4 )]
-position = Vector2( 380.89, -679.752 )
+[node name="room5" parent="." instance=ExtResource( 4 )]
+position = Vector2( 374.59, -509.663 )
+scale = Vector2( 1, 1 )
 
-[node name="room6" parent="rooms" instance=ExtResource( 1 )]
-position = Vector2( 2396.26, -1922.71 )
+[node name="room6" parent="." instance=ExtResource( 1 )]
+position = Vector2( 2396.26, -1759.95 )
 rotation = 0.102974
+scale = Vector2( 1, 1 )
 
-[node name="room7" parent="rooms" instance=ExtResource( 4 )]
+[node name="room7" parent="." instance=ExtResource( 4 )]
 position = Vector2( 4575.37, 1809.65 )
+scale = Vector2( 1, 1 )
 
-[node name="room8" parent="rooms" instance=ExtResource( 3 )]
+[node name="room8" parent="." instance=ExtResource( 3 )]
 position = Vector2( 6505.32, -146.694 )
+scale = Vector2( 1, 1 )
 
-[node name="room2" parent="rooms" instance=ExtResource( 2 )]
+[node name="room2" parent="." instance=ExtResource( 2 )]
 position = Vector2( 5187.63, -47.4583 )
+scale = Vector2( 1, 1 )
+
+[node name="football2" parent="." instance=ExtResource( 7 )]
+position = Vector2( 1784.14, -2483.65 )
+scale = Vector2( 1, 1 )
+
+[node name="football3" parent="." instance=ExtResource( 7 )]
+position = Vector2( 1147.88, -3308.9 )
+scale = Vector2( 1, 1 )
+
+[node name="football4" parent="." instance=ExtResource( 7 )]
+position = Vector2( 2628.29, -1122.94 )
+scale = Vector2( 1, 1 )
+
+[node name="football5" parent="." instance=ExtResource( 7 )]
+position = Vector2( 1551.06, -1582.81 )
+scale = Vector2( 1, 1 )
 
 [node name="football" parent="." instance=ExtResource( 7 )]
 position = Vector2( 416.956, -3417.44 )
-
-[node name="football" parent="football" instance=ExtResource( 7 )]
-position = Vector2( 1367.18, 933.787 )
-
-[node name="football2" parent="football" instance=ExtResource( 7 )]
-position = Vector2( 730.924, 108.538 )
-
-[node name="football3" parent="football" instance=ExtResource( 7 )]
-position = Vector2( 1134.1, 1834.63 )
-
-[node name="football" parent="football/football3" instance=ExtResource( 7 )]
-position = Vector2( 1077.23, 459.871 )
 
 [node name="gameboy" parent="." instance=ExtResource( 5 )]
 position = Vector2( -17.5225, -3129.69 )

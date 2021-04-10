@@ -4,15 +4,15 @@
 
 [sub_resource type="SpriteFrames" id=1]
 animations = [ {
-"frames": [ null, null, null, null, null, null ],
-"loop": true,
-"name": "squashed",
-"speed": 5.0
-}, {
 "frames": [ null, null, null, null, null, null, null, null, null, null ],
 "loop": true,
 "name": "crawl",
 "speed": 7.0
+}, {
+"frames": [ null, null, null, null, null, null ],
+"loop": true,
+"name": "squashed",
+"speed": 5.0
 } ]
 
 [sub_resource type="RectangleShape2D" id=2]
