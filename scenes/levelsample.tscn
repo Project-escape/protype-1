@@ -36,48 +36,37 @@ texture = ExtResource( 6 )
 [node name="room3" parent="." instance=ExtResource( 1 )]
 position = Vector2( 2314.54, -177.338 )
 rotation = 0.0767945
-scale = Vector2( 1, 1 )
 
 [node name="room4" parent="." instance=ExtResource( 3 )]
 position = Vector2( 486.637, -2889.18 )
-scale = Vector2( 1, 1 )
 
 [node name="room5" parent="." instance=ExtResource( 4 )]
 position = Vector2( 374.59, -509.663 )
-scale = Vector2( 1, 1 )
 
 [node name="room6" parent="." instance=ExtResource( 1 )]
 position = Vector2( 2396.26, -1759.95 )
 rotation = 0.102974
-scale = Vector2( 1, 1 )
 
 [node name="room7" parent="." instance=ExtResource( 4 )]
 position = Vector2( 4575.37, 1809.65 )
-scale = Vector2( 1, 1 )
 
 [node name="room8" parent="." instance=ExtResource( 3 )]
 position = Vector2( 6505.32, -146.694 )
-scale = Vector2( 1, 1 )
 
 [node name="room2" parent="." instance=ExtResource( 2 )]
 position = Vector2( 5187.63, -47.4583 )
-scale = Vector2( 1, 1 )
 
 [node name="football2" parent="." instance=ExtResource( 7 )]
 position = Vector2( 1784.14, -2483.65 )
-scale = Vector2( 1, 1 )
 
 [node name="football3" parent="." instance=ExtResource( 7 )]
 position = Vector2( 1147.88, -3308.9 )
-scale = Vector2( 1, 1 )
 
 [node name="football4" parent="." instance=ExtResource( 7 )]
 position = Vector2( 2628.29, -1122.94 )
-scale = Vector2( 1, 1 )
 
 [node name="football5" parent="." instance=ExtResource( 7 )]
 position = Vector2( 1551.06, -1582.81 )
-scale = Vector2( 1, 1 )
 
 [node name="football" parent="." instance=ExtResource( 7 )]
 position = Vector2( 416.956, -3417.44 )

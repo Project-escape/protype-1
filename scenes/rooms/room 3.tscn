@@ -3,7 +3,7 @@
 [ext_resource path="res://assests/Environment/wall 3.png" type="Texture" id=1]
 [ext_resource path="res://scenes/door.tscn" type="PackedScene" id=2]
 [ext_resource path="res://assests/Environment/background wall 3.png" type="Texture" id=3]
-[ext_resource path="res://assests/Effects/light.png" type="Texture" id=4]
+[ext_resource path="res://assests/Effects/light 3.png" type="Texture" id=4]
 [ext_resource path="res://assests/Effects/kisspng-incandescent-light-bulb-led-lamp-light-emitting-di-a-light-bulb-5a6a5286db2499.3081099115169173828976.png" type="Texture" id=5]
 
 [sub_resource type="RectangleShape2D" id=1]
@@ -22,8 +22,8 @@ extents = Vector2( 439.526, 25.6603 )
 polygon = PoolVector2Array( 356.913, -745.498, 1739.07, -742.489, 1740.57, 1080.79, 356.213, 1080.79, 356.59, -744.602, 425.543, -692.466, 423.637, 1028.28, 1669.52, 1031.28, 1671.02, -692.733, 425.543, -692.466 )
 
 [sub_resource type="CapsuleShape2D" id=6]
-radius = 38.4558
-height = 49.9109
+radius = 48.2141
+height = 85.1056
 
 [node name="room2" type="Node2D"]
 
@@ -64,31 +64,21 @@ shape = SubResource( 4 )
 occluder = SubResource( 5 )
 
 [node name="roomlight" type="StaticBody2D" parent="."]
-position = Vector2( 107.093, -132.292 )
-
-[node name="Light2D" type="Light2D" parent="roomlight"]
-position = Vector2( 1422.56, -418.296 )
-scale = Vector2( 0.0217122, 0.0217122 )
-texture = ExtResource( 4 )
-texture_scale = 10.8
-energy = 3.86
-mode = 2
-
-[node name="Light2D2" type="Light2D" parent="roomlight"]
-position = Vector2( 1100.42, -50.5164 )
-scale = Vector2( 0.0646109, 0.0646109 )
-texture = ExtResource( 4 )
-texture_scale = 10.8
-energy = 3.86
-mode = 2
 
 [node name="Sprite" type="Sprite" parent="roomlight"]
-modulate = Color( 0.705882, 1, 1, 1 )
-position = Vector2( 1499.8, -489.549 )
-rotation = -3.13492
-scale = Vector2( 0.091497, 0.091497 )
+position = Vector2( 1583.68, -635.865 )
+rotation = 3.13587
+scale = Vector2( 0.126235, 0.126235 )
 texture = ExtResource( 5 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="roomlight"]
-position = Vector2( 1499.31, -490.109 )
+position = Vector2( 1580.47, -631.019 )
 shape = SubResource( 6 )
+
+[node name="LightOccluder2D" type="LightOccluder2D" parent="roomlight"]
+visible = false
+
+[node name="Light2D" type="Light2D" parent="roomlight"]
+position = Vector2( 1080.05, 191.875 )
+texture = ExtResource( 4 )
+energy = 9.39
