@@ -4,13 +4,16 @@ onready var light = get_node("roomlight/Light2D")
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	light.visible = false
+	light.enabled = false
+	print("Light off")
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta):
-	light.visible = false
+func _process(delta) -> void:
+	light.enabled = false
+	print("Light off")
 
 
 func _on_lightsensor_body_entered(body):
-	light.visible = true
+	light.enabled = true
+	print("Light on")

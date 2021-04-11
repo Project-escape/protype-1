@@ -28,7 +28,7 @@ radius = 48.2141
 height = 85.1056
 
 [sub_resource type="RectangleShape2D" id=7]
-extents = Vector2( 612.75, 861.583 )
+extents = Vector2( 612.75, 229.229 )
 
 [node name="room2" type="Node2D"]
 script = ExtResource( 6 )
@@ -86,13 +86,15 @@ visible = false
 
 [node name="Light2D" type="Light2D" parent="roomlight"]
 position = Vector2( 1080.05, 191.875 )
+enabled = false
 texture = ExtResource( 4 )
 energy = 9.39
 
 [node name="lightsensor" type="Area2D" parent="."]
+position = Vector2( 6.72717, 114.362 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="lightsensor"]
-position = Vector2( 1049.44, 174.906 )
+position = Vector2( 1046.07, -450.721 )
 shape = SubResource( 7 )
 
 [node name="gameboy" parent="." instance=ExtResource( 7 )]
