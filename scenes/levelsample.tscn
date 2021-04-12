@@ -73,6 +73,7 @@ position = Vector2( 416.956, -3417.44 )
 
 [node name="gameboy" parent="." instance=ExtResource( 5 )]
 position = Vector2( -17.5225, -3129.69 )
+scale = Vector2( 1, 1 )
 
 [node name="Camera2D" type="Camera2D" parent="gameboy"]
 current = true
