@@ -34,7 +34,7 @@ position = Vector2( 959.279, 540.278 )
 texture = ExtResource( 6 )
 
 [node name="room3" parent="." instance=ExtResource( 1 )]
-position = Vector2( 2314.54, -177.338 )
+position = Vector2( 2278.9, -132.793 )
 rotation = 0.0767945
 
 [node name="room4" parent="." instance=ExtResource( 3 )]
@@ -51,7 +51,10 @@ rotation = 0.102974
 position = Vector2( 4575.37, 1809.65 )
 
 [node name="room8" parent="." instance=ExtResource( 3 )]
-position = Vector2( 6505.32, -146.694 )
+position = Vector2( 6984.09, -197.091 )
+
+[node name="room2" parent="room8" instance=ExtResource( 4 )]
+position = Vector2( -6274.2, 2012.37 )
 
 [node name="room2" parent="." instance=ExtResource( 2 )]
 position = Vector2( 5187.63, -47.4583 )
