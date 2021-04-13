@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=2]
+[gd_scene load_steps=15 format=2]
 
 [ext_resource path="res://assests/Player/idle.png" type="Texture" id=1]
 [ext_resource path="res://script/gameboy.gd" type="Script" id=2]
@@ -7,6 +7,8 @@
 [ext_resource path="res://assests/Player/walk (2).png" type="Texture" id=5]
 [ext_resource path="res://assests/Player/air.png" type="Texture" id=6]
 [ext_resource path="res://scenes/Gun.tscn" type="PackedScene" id=7]
+[ext_resource path="res://assests/Addons/vest.png" type="Texture" id=8]
+[ext_resource path="res://assests/Addons/head phone military.png" type="Texture" id=9]
 
 [sub_resource type="AtlasTexture" id=1]
 flags = 4
@@ -74,6 +76,14 @@ position = Vector2( -5.62134, 17.1515 )
 frames = SubResource( 4 )
 animation = "jump"
 playing = true
+
+[node name="head phone military" type="Sprite" parent="Sprite"]
+position = Vector2( 1.72799, -55.4653 )
+texture = ExtResource( 9 )
+
+[node name="vest" type="Sprite" parent="Sprite"]
+position = Vector2( 0.313477, 58.1847 )
+texture = ExtResource( 8 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2( -3.76444, 15.7242 )

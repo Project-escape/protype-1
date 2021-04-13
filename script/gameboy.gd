@@ -3,16 +3,21 @@ var velocity = Vector2(0,0)
 var coins = 0
 const SPEED = 350
 const GRAVITY = 35
-const JUMPFORCE = -1500 
+const JUMPFORCE = -1100 
+
 func _physics_process(_delta):
 	if Input.is_action_pressed("right"):
 		velocity.x = SPEED
 		$Sprite.play("walk")
 		$Sprite.flip_h = false
+		$Sprite/vest.flip_h = false
+		$"Sprite/head phone military".flip_h = false
 	elif Input.is_action_pressed("left"):
 		velocity.x = -SPEED
 		$Sprite.play("walk")
 		$Sprite.flip_h = true
+		$Sprite/vest.flip_h = true
+		$"Sprite/head phone military".flip_h = true
 	else:
 		$Sprite.play("idle")
 	if not is_on_floor():
@@ -27,12 +32,8 @@ func _physics_process(_delta):
 	
 	velocity.x = lerp(velocity.x,0,0.2)
 	
-	
-
-
 func _on_fallzone_body_entered(body):
 	get_tree().change_scene("res://gameover.tscn")
-
 
 func bounce():
 	velocity.y = JUMPFORCE * 0.7
@@ -49,8 +50,6 @@ func ouch(var enemyposx):
 	Input.action_release("left")
 	Input.action_release("right")
 	$Timer.start()
-
-
 
 func _on_Timer_timeout():
 	get_tree().change_scene("res://gameover.tscn")
