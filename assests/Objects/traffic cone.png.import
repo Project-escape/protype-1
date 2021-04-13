@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/traffic cone.png-66cf5809d92535688b201fda90f95900.stex"
+path="res://.import/traffic cone.png-ad364c779b6752944cbce70cfd749fa5.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assests/Items/traffic cone.png"
-dest_files=[ "res://.import/traffic cone.png-66cf5809d92535688b201fda90f95900.stex" ]
+source_file="res://assests/Objects/traffic cone.png"
+dest_files=[ "res://.import/traffic cone.png-ad364c779b6752944cbce70cfd749fa5.stex" ]
 
 [params]
 

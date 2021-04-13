@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/door close.png-de17a2598a0e3755cabc6a6c66adfd94.stex"
+path="res://.import/football.png-29daeef8ce57a9c49374ec8c451f4907.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assests/Items/door close.png"
-dest_files=[ "res://.import/door close.png-de17a2598a0e3755cabc6a6c66adfd94.stex" ]
+source_file="res://assests/Objects/football.png"
+dest_files=[ "res://.import/football.png-29daeef8ce57a9c49374ec8c451f4907.stex" ]
 
 [params]
 

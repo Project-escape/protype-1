@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/door open.png-bf1ff98f03493caffeb64e62425a8c0d.stex"
+path="res://.import/Cement.png-2db836ea5d0213193663e197364e4199.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assests/Items/door open.png"
-dest_files=[ "res://.import/door open.png-bf1ff98f03493caffeb64e62425a8c0d.stex" ]
+source_file="res://assests/Objects/Cement.png"
+dest_files=[ "res://.import/Cement.png-2db836ea5d0213193663e197364e4199.stex" ]
 
 [params]
 
