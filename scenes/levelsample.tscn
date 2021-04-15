@@ -96,11 +96,9 @@ position = Vector2( -15.6794, -294.951 )
 
 [node name="platform3" parent="." instance=ExtResource( 9 )]
 position = Vector2( 1199.75, -103.108 )
-scale = Vector2( 1, 1 )
 
 [node name="platform2" parent="." instance=ExtResource( 9 )]
 position = Vector2( 1187.01, -842.168 )
-scale = Vector2( 1, 1 )
 
 [node name="platform" parent="." instance=ExtResource( 9 )]
 position = Vector2( 1661.05, -463.731 )
@@ -113,3 +111,9 @@ position = Vector2( 1091.06, -2913.57 )
 
 [node name="wooden box yellow" parent="wooden box yellow" instance=ExtResource( 10 )]
 position = Vector2( 1822.4, 1684.39 )
+
+[node name="room9" parent="." instance=ExtResource( 1 )]
+position = Vector2( -68.6908, 3089.59 )
+
+[node name="room2" parent="room9" instance=ExtResource( 1 )]
+position = Vector2( 3937.78, 66.7424 )

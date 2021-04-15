@@ -1,7 +1,9 @@
 [gd_scene load_steps=4 format=2]
 
 [ext_resource path="res://assests/Weapon/bullet.png" type="Texture" id=1]
-[ext_resource path="res://scenes/Bullet.gd" type="Script" id=2]
+[ext_resource path="res://script/Bullet.gd" type="Script" id=2]
+
+
 
 [sub_resource type="CapsuleShape2D" id=1]
 height = 12.2953

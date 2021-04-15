@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=2]
+[gd_scene load_steps=17 format=2]
 
 [ext_resource path="res://assests/Player/idle.png" type="Texture" id=1]
 [ext_resource path="res://script/gameboy.gd" type="Script" id=2]
@@ -9,6 +9,8 @@
 [ext_resource path="res://scenes/Gun.tscn" type="PackedScene" id=7]
 [ext_resource path="res://assests/Addons/vest.png" type="Texture" id=8]
 [ext_resource path="res://assests/Addons/head phone military.png" type="Texture" id=9]
+[ext_resource path="res://assests/Addons/cardboard box.png" type="Texture" id=10]
+[ext_resource path="res://sounds/Cardboard.wav" type="AudioStream" id=11]
 
 [sub_resource type="AtlasTexture" id=1]
 flags = 4
@@ -72,18 +74,18 @@ shadow_enabled = true
 
 [node name="Sprite" type="AnimatedSprite" parent="."]
 modulate = Color( 1, 1, 1, 0.8 )
-position = Vector2( -5.62134, 17.1515 )
+position = Vector2( -5.62134, 17.6515 )
 frames = SubResource( 4 )
 animation = "jump"
 playing = true
 
+[node name="vest" type="Sprite" parent="Sprite"]
+position = Vector2( -1.18652, 53.6847 )
+texture = ExtResource( 8 )
+
 [node name="head phone military" type="Sprite" parent="Sprite"]
 position = Vector2( 1.72799, -55.4653 )
 texture = ExtResource( 9 )
-
-[node name="vest" type="Sprite" parent="Sprite"]
-position = Vector2( 0.313477, 58.1847 )
-texture = ExtResource( 8 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2( -3.76444, 15.7242 )
@@ -99,6 +101,14 @@ pitch_scale = 1.27
 
 [node name="SoundHurt" type="AudioStreamPlayer" parent="."]
 
+[node name="SoundCardboard" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource( 11 )
+
 [node name="Node2D" parent="." instance=ExtResource( 7 )]
 position = Vector2( -38.9091, 42.0065 )
+
+[node name="cardboard box" type="Sprite" parent="."]
+visible = false
+position = Vector2( 4.14063, 9.40469 )
+texture = ExtResource( 10 )
 [connection signal="timeout" from="Timer" to="." method="_on_Timer_timeout"]
