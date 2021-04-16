@@ -1,7 +1,6 @@
 extends Node2D
 
 onready var area: Area2D = $AreaDetector
-#var closed = false  this thing also have minor bug 
 var closed = false
 
 func _ready() -> void:
@@ -25,10 +24,12 @@ func _process(delta) -> void:
 				closed = true
 
 func _on_AreaDetector_body_entered(body):
-	print("yes")
-	set_process(true)
+	if body.name == "gameboy":
+		print("yes")
+		set_process(true)
 
 
 func _on_AreaDetector_body_exited(body):
-	print("no")
-	set_process(false)
+	if body.name == "gameboy":
+		print("no")
+		set_process(false)
