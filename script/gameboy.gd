@@ -34,14 +34,14 @@ func _physics_process(_delta):
 		velocity.x = SPEED
 		$Sprite.play("walk")
 		$Sprite.flip_h = false
-		$Sprite/vest.flip_h = false
-		$"Sprite/head phone military".flip_h = false
+		$vest.flip_h = false
+		$"head phone military".flip_h = false
 	elif Input.is_action_pressed("left"):
 		velocity.x = -SPEED
 		$Sprite.play("walk")
 		$Sprite.flip_h = true
-		$Sprite/vest.flip_h = true
-		$"Sprite/head phone military".flip_h = true
+		$vest.flip_h = true
+		$"head phone military".flip_h = true
 	else:
 		$Sprite.play("idle")
 	if not is_on_floor():

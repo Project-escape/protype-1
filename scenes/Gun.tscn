@@ -12,7 +12,8 @@ position = Vector2( 64.994, -9.57199 )
 texture = ExtResource( 2 )
 
 [node name="BulletPoint" type="Node2D" parent="."]
-position = Vector2( 183.315, -35.3176 )
+position = Vector2( 184.718, -38.4044 )
+z_as_relative = false
 
 [node name="SoundShot" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 3 )

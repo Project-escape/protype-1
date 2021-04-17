@@ -30,6 +30,7 @@ polygon = PoolVector2Array( -1061.35, -700.436, 1733.35, -700.436, 1735.13, 1075
 
 [node name="Sprite" type="Sprite" parent="."]
 position = Vector2( 352.398, 186.878 )
+z_index = -1
 texture = ExtResource( 3 )
 
 [node name="door2" parent="." instance=ExtResource( 2 )]

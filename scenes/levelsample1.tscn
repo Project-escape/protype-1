@@ -1,0 +1,128 @@
+[gd_scene load_steps=12 format=2]
+
+[ext_resource path="res://scenes/rooms/room 2.tscn" type="PackedScene" id=1]
+[ext_resource path="res://scenes/rooms/room 1.tscn" type="PackedScene" id=2]
+[ext_resource path="res://scenes/rooms/room 4.tscn" type="PackedScene" id=3]
+[ext_resource path="res://scenes/rooms/room 3.tscn" type="PackedScene" id=4]
+[ext_resource path="res://scenes/gameboy.tscn" type="PackedScene" id=5]
+[ext_resource path="res://assests/Environment/background.png" type="Texture" id=6]
+[ext_resource path="res://scenes/football.tscn" type="PackedScene" id=7]
+[ext_resource path="res://scenes/wooden box white.tscn" type="PackedScene" id=8]
+[ext_resource path="res://scenes/platform.tscn" type="PackedScene" id=9]
+[ext_resource path="res://scenes/wooden box yellow.tscn" type="PackedScene" id=10]
+[ext_resource path="res://scenes/ladder.tscn" type="PackedScene" id=11]
+
+[node name="LevelSample" type="Node2D"]
+modulate = Color( 0.294118, 0.294118, 0.294118, 1 )
+position = Vector2( 781, 64 )
+scale = Vector2( 0.8, 0.8 )
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="ColorRect" type="ColorRect" parent="CanvasLayer"]
+visible = false
+light_mask = 2
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_right = 8.0
+margin_bottom = -0.200073
+color = Color( 0.364706, 0.364706, 0.364706, 0.529412 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ParallaxBackground" type="ParallaxBackground" parent="."]
+
+[node name="Sprite" type="Sprite" parent="ParallaxBackground"]
+position = Vector2( 959.279, 540.278 )
+texture = ExtResource( 6 )
+
+[node name="room3" parent="." instance=ExtResource( 1 )]
+position = Vector2( 2278.9, -132.793 )
+rotation = 0.0767945
+
+[node name="room4" parent="." instance=ExtResource( 3 )]
+position = Vector2( 486.637, -2889.18 )
+
+[node name="room5" parent="." instance=ExtResource( 4 )]
+position = Vector2( 374.59, -509.663 )
+
+[node name="room6" parent="." instance=ExtResource( 1 )]
+position = Vector2( 2396.26, -1759.95 )
+rotation = 0.102974
+
+[node name="room7" parent="." instance=ExtResource( 4 )]
+position = Vector2( 4575.37, 1809.65 )
+
+[node name="room8" parent="." instance=ExtResource( 3 )]
+position = Vector2( 6984.09, -197.091 )
+
+[node name="room2" parent="room8" instance=ExtResource( 4 )]
+position = Vector2( -6274.2, 2012.37 )
+
+[node name="room2" parent="." instance=ExtResource( 2 )]
+position = Vector2( 5187.63, -47.4583 )
+
+[node name="football2" parent="." instance=ExtResource( 7 )]
+position = Vector2( 1381.09, -2306.87 )
+scale = Vector2( 1, 1 )
+
+[node name="room9" parent="football2" instance=ExtResource( 1 )]
+position = Vector2( -1449.78, 5396.46 )
+
+[node name="room2" parent="football2/room9" instance=ExtResource( 1 )]
+position = Vector2( 3937.78, 66.7424 )
+
+[node name="ladder" parent="football2" instance=ExtResource( 11 )]
+position = Vector2( 510.778, -215.327 )
+
+[node name="football3" parent="." instance=ExtResource( 7 )]
+position = Vector2( 1147.88, -3308.9 )
+scale = Vector2( 1, 1 )
+
+[node name="football4" parent="." instance=ExtResource( 7 )]
+position = Vector2( 2628.29, -1122.94 )
+
+[node name="football5" parent="." instance=ExtResource( 7 )]
+position = Vector2( 1551.06, -1582.81 )
+
+[node name="wooden box white" parent="." instance=ExtResource( 8 )]
+position = Vector2( 1302.98, -2018.38 )
+
+[node name="wooden box white2" parent="wooden box white" instance=ExtResource( 8 )]
+position = Vector2( -195.477, -296.403 )
+
+[node name="wooden box white2" parent="wooden box white/wooden box white2" instance=ExtResource( 8 )]
+position = Vector2( -15.6794, -294.951 )
+
+[node name="platform3" parent="." instance=ExtResource( 9 )]
+position = Vector2( 1199.75, -103.108 )
+
+[node name="platform2" parent="." instance=ExtResource( 9 )]
+position = Vector2( 1187.01, -842.168 )
+
+[node name="platform" parent="." instance=ExtResource( 9 )]
+position = Vector2( 1661.05, -463.731 )
+
+[node name="wooden box white2" parent="." instance=ExtResource( 8 )]
+position = Vector2( 1616.03, 371.16 )
+
+[node name="gameboy" parent="." instance=ExtResource( 5 )]
+position = Vector2( -59.9487, -3175.65 )
+scale = Vector2( 1, 1 )
+
+[node name="Camera2D" type="Camera2D" parent="gameboy"]
+rotating = true
+current = true
+process_mode = 0
+smoothing_enabled = true
+
+[node name="wooden box yellow" parent="." instance=ExtResource( 10 )]
+position = Vector2( 3518.32, 427.654 )
+
+[node name="wooden box yellow" parent="wooden box yellow" instance=ExtResource( 10 )]
+position = Vector2( 1822.4, 1684.39 )
+
+[node name="football6" parent="." instance=ExtResource( 7 )]
+position = Vector2( 463.563, -3213.36 )
+scale = Vector2( 1, 1 )

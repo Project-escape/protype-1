@@ -10,7 +10,6 @@ func _process(_delta):
 	look_at(get_global_mouse_position())
 	if Input.is_action_pressed("fire") and can_fire:
 		$SoundShot.play()
-		print("fire")
 		var bullet_instance = bullet.instance()
 		bullet_instance.position = $BulletPoint.get_global_position()
 		bullet_instance.rotation_degrees = rotation_degrees

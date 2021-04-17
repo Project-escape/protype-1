@@ -61,6 +61,7 @@ height = 109.585
 script = ExtResource( 2 )
 
 [node name="Light2D" type="Light2D" parent="."]
+visible = false
 position = Vector2( 0.218017, -2.7818 )
 rotation = -0.00153396
 texture = ExtResource( 4 )
@@ -79,12 +80,12 @@ frames = SubResource( 4 )
 animation = "jump"
 playing = true
 
-[node name="vest" type="Sprite" parent="Sprite"]
-position = Vector2( -1.18652, 53.6847 )
+[node name="vest" type="Sprite" parent="."]
+position = Vector2( -6.80786, 71.3362 )
 texture = ExtResource( 8 )
 
-[node name="head phone military" type="Sprite" parent="Sprite"]
-position = Vector2( 1.72799, -55.4653 )
+[node name="head phone military" type="Sprite" parent="."]
+position = Vector2( -3.89335, -37.8138 )
 texture = ExtResource( 9 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
