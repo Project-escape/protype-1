@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/HUD_icon_coin.png-85af385662239667e53ed096b88ede2b.stex"
+path="res://.import/weapon case.png-8de28be2827ac26e17f9ae4a52c49bf9.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assests/Coin/HUD_icon_coin.png"
-dest_files=[ "res://.import/HUD_icon_coin.png-85af385662239667e53ed096b88ede2b.stex" ]
+source_file="res://assests/Objects/weapon case.png"
+dest_files=[ "res://.import/weapon case.png-8de28be2827ac26e17f9ae4a52c49bf9.stex" ]
 
 [params]
 

@@ -61,13 +61,11 @@ height = 109.585
 script = ExtResource( 2 )
 
 [node name="Light2D" type="Light2D" parent="."]
-visible = false
 position = Vector2( 0.218017, -2.7818 )
 rotation = -0.00153396
 texture = ExtResource( 4 )
-texture_scale = 0.98
 color = Color( 1, 1, 1, 0.298039 )
-energy = 3.99
+energy = 5.0
 mode = 2
 range_z_min = -20
 range_z_max = 20

@@ -42,6 +42,7 @@ position = Vector2( -990.854, -77.0816 )
 
 [node name="wall 4" type="Sprite" parent="."]
 position = Vector2( 339.711, 185.108 )
+z_index = 2
 texture = ExtResource( 1 )
 
 [node name="StaticBody2D" type="StaticBody2D" parent="."]

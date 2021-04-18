@@ -12,11 +12,6 @@ func _process(delta) -> void:
 			if closed == true:
 				$StaticBody2D/CollisionShape2D.set_disabled(true)
 				$AnimatedSprite.play("open_door")
-				#var doorlight = get_node("res://scenes/rooms/room 3.tscn")
-				#doorlight.roomlight.Light2D.enabled = false
-				#doorlight.roomlight.Light2D.enabled = false
-				#var light = get_node("res://scenes/rooms/room 3.tscn").get_node("roomlight").get_node("Light2D")
-				#Light2D.enabled = false
 				closed = false
 			elif closed == false:
 				$StaticBody2D/CollisionShape2D.set_disabled(false)

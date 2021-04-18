@@ -37,6 +37,7 @@ position = Vector2( 1384.94, 351.942 )
 [node name="wall1" type="Sprite" parent="."]
 light_mask = 16
 position = Vector2( 766.1, 542.906 )
+z_index = 2
 texture = ExtResource( 1 )
 
 [node name="StaticBody2D" type="StaticBody2D" parent="."]

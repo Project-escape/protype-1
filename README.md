@@ -10,7 +10,6 @@ Prototype with player controls , need to remove unwanted assests and script file
 2. Clone this repo there
 3. unzip the assests i emailed you guys.
 
-
 Your file structure should be like , the screenshot below.
 
 ![filetructure](https://user-images.githubusercontent.com/64256342/111038737-8e9f8080-8450-11eb-92c5-7d197f0d7de4.png)

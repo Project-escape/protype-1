@@ -61,19 +61,6 @@ func _on_fallzone_body_entered(body):
 
 func bounce():
 	velocity.y = JUMPFORCE * 0.7
-
-func ouch(var enemyposx):
-	set_modulate(Color(1,0.3,0.3,0.3))
-	$SoundHurt.play()
-	velocity.y = JUMPFORCE * 0.5
-	
-	if position.x < enemyposx:
-		velocity.x = -800
-	elif position.x > enemyposx:
-		velocity.x = 800
-	Input.action_release("left")
-	Input.action_release("right")
-	$Timer.start()
 	
 func _body_entered_ladder():
 	GRAVITY = 0
