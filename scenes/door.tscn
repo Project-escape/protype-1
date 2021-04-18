@@ -1,8 +1,8 @@
 [gd_scene load_steps=9 format=2]
 
 [ext_resource path="res://script/door.gd" type="Script" id=1]
-[ext_resource path="res://assests/Items/door open.png" type="Texture" id=2]
-[ext_resource path="res://assests/Items/door close.png" type="Texture" id=3]
+[ext_resource path="res://assests/Objects/door open.png" type="Texture" id=2]
+[ext_resource path="res://assests/Objects/door close.png" type="Texture" id=3]
 [ext_resource path="res://sounds/close_door_1.wav" type="AudioStream" id=4]
 
 [sub_resource type="SpriteFrames" id=1]

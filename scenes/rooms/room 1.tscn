@@ -23,7 +23,9 @@ polygon = PoolVector2Array( 73.5937, 99.8173, 1454.42, 98.0569, 1456.42, 982.057
 [node name="room2" type="Node2D"]
 
 [node name="Sprite" type="Sprite" parent="."]
+show_behind_parent = true
 position = Vector2( 771.538, 541.945 )
+z_index = -1
 texture = ExtResource( 3 )
 
 [node name="door2" parent="." instance=ExtResource( 2 )]
@@ -35,6 +37,7 @@ position = Vector2( 1384.94, 351.942 )
 [node name="wall1" type="Sprite" parent="."]
 light_mask = 16
 position = Vector2( 766.1, 542.906 )
+z_index = 2
 texture = ExtResource( 1 )
 
 [node name="StaticBody2D" type="StaticBody2D" parent="."]

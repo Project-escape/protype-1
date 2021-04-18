@@ -1,7 +1,6 @@
 extends Node2D
 
 onready var area: Area2D = $AreaDetector
-#var closed = false  this thing also have minor bug 
 var closed = false
 
 func _ready() -> void:
@@ -13,11 +12,6 @@ func _process(delta) -> void:
 			if closed == true:
 				$StaticBody2D/CollisionShape2D.set_disabled(true)
 				$AnimatedSprite.play("open_door")
-				#var doorlight = get_node("res://scenes/rooms/room 3.tscn")
-				#doorlight.roomlight.Light2D.enabled = false
-				#doorlight.roomlight.Light2D.enabled = false
-				#var light = get_node("res://scenes/rooms/room 3.tscn").get_node("roomlight").get_node("Light2D")
-				#Light2D.enabled = false
 				closed = false
 			elif closed == false:
 				$StaticBody2D/CollisionShape2D.set_disabled(false)
@@ -25,10 +19,12 @@ func _process(delta) -> void:
 				closed = true
 
 func _on_AreaDetector_body_entered(body):
-	print("yes")
-	set_process(true)
+	if body.name == "gameboy":
+		print("yes")
+		set_process(true)
 
 
 func _on_AreaDetector_body_exited(body):
-	print("no")
-	set_process(false)
+	if body.name == "gameboy":
+		print("no")
+		set_process(false)

@@ -1,15 +1,14 @@
 extends Node2D
 
 export var bullet_speed = 1000
-export var fire_rate = 0.2
+export var fire_rate = 0.4
 var bullet = preload("res://scenes/Bullet.tscn")
 var can_fire = true
 
-# Called when the node enters the scene tree for the first time.
-func _process(delta):
+func _process(_delta):
 	look_at(get_global_mouse_position())
 	if Input.is_action_pressed("fire") and can_fire:
-		print("fire")
+		$SoundShot.play()
 		var bullet_instance = bullet.instance()
 		bullet_instance.position = $BulletPoint.get_global_position()
 		bullet_instance.rotation_degrees = rotation_degrees
