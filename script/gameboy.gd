@@ -1,15 +1,22 @@
 extends KinematicBody2D
+
+
 var velocity = Vector2(0,0)
 var coins = 0
 var cover = false
 var ladder_on = false
-const SPEED = 350
+var SPEED = 350
 var GRAVITY = 35
+var INERTIA = 350
 const JUMPFORCE = -1100
 
 func _physics_process(_delta):
 	#var ladder = get_tree().get_root().find_node("ladder",true,false)
 	#ladder.connect("ladder_on",self,"_body_enter_ladder")
+	if Input.is_action_pressed("sprint"):
+		SPEED = 900
+	else:
+		SPEED = 350
 	if ladder_on == true:
 		if Input.is_action_pressed("up") :
 			print("up")
@@ -51,10 +58,15 @@ func _physics_process(_delta):
 	if Input.is_action_just_pressed("jump") and is_on_floor() :
 		velocity.y = JUMPFORCE
 		$SoundJump.play()
-		
-	velocity = move_and_slide(velocity,Vector2.UP)
-	
 	velocity.x = lerp(velocity.x,0,0.2)
+	velocity = move_and_slide(velocity, Vector2.UP, false, 4, 0.785398, false)
+	
+	for index in get_slide_count():
+		var collision = get_slide_collision(index)
+		if collision.collider.is_in_group("bodies"):
+			print("body")
+			collision.collider.apply_central_impulse(-collision.normal * INERTIA)
+
 	
 func _on_fallzone_body_entered(body):
 	get_tree().change_scene("res://gameover.tscn")

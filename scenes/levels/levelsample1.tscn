@@ -116,11 +116,12 @@ current = true
 process_mode = 0
 smoothing_enabled = true
 
+[node name="wooden box yellow2" parent="." instance=ExtResource( 10 )]
+position = Vector2( 5340.72, 2112.04 )
+scale = Vector2( 1, 1 )
+
 [node name="wooden box yellow" parent="." instance=ExtResource( 10 )]
 position = Vector2( 3518.32, 427.654 )
-
-[node name="wooden box yellow" parent="wooden box yellow" instance=ExtResource( 10 )]
-position = Vector2( 1822.4, 1684.39 )
 
 [node name="football6" parent="." instance=ExtResource( 7 )]
 position = Vector2( 463.563, -3213.36 )
