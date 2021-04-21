@@ -11,9 +11,10 @@
 [node name="Node2D" type="Node2D"]
 modulate = Color( 0.203922, 0.203922, 0.203922, 1 )
 show_behind_parent = true
+position = Vector2( -4048.24, -28.5088 )
 
 [node name="gameboy" parent="." instance=ExtResource( 7 )]
-position = Vector2( 3323.44, -1257.07 )
+position = Vector2( 3357.38, -1358.89 )
 
 [node name="Camera2D" type="Camera2D" parent="gameboy"]
 current = true
@@ -21,37 +22,68 @@ current = true
 [node name="rooms" type="Node2D" parent="."]
 
 [node name="room3" parent="rooms" instance=ExtResource( 3 )]
-position = Vector2( 306.225, -224.607 )
+position = Vector2( -300.047, -464.369 )
 
 [node name="room6" parent="rooms" instance=ExtResource( 1 )]
-position = Vector2( 1617.09, 945.133 )
+position = Vector2( 1571.78, 747.58 )
 
 [node name="room5" parent="rooms" instance=ExtResource( 6 )]
-position = Vector2( 3492.53, -907.036 )
+position = Vector2( 3492.53, -997.546 )
 
 [node name="room4" parent="rooms" instance=ExtResource( 4 )]
-position = Vector2( 3200.98, 1670.06 )
+position = Vector2( 3133.71, 1252.98 )
 
 [node name="room9" parent="rooms" instance=ExtResource( 3 )]
-position = Vector2( 8156.38, 1883.56 )
-rotation = -3.14159
-
-[node name="room8" parent="rooms" instance=ExtResource( 4 )]
-position = Vector2( 7120.98, 3640.19 )
+position = Vector2( 8159.74, 1882.24 )
 rotation = -3.14159
 
 [node name="room7" parent="rooms" instance=ExtResource( 6 )]
-position = Vector2( 1732.45, 2439.41 )
+position = Vector2( 1589.91, 2439.41 )
 rotation = -3.14159
 
 [node name="room2" parent="rooms" instance=ExtResource( 1 )]
-position = Vector2( 643.082, -1420.71 )
-
-[node name="wooden box yellow" parent="rooms" instance=ExtResource( 2 )]
-position = Vector2( 4198.77, -325.239 )
-
-[node name="wooden box white" parent="rooms" instance=ExtResource( 5 )]
-position = Vector2( 4129.71, -30.8167 )
+position = Vector2( 458.624, -1783.85 )
 
 [node name="room10" parent="rooms" instance=ExtResource( 3 )]
-position = Vector2( 2330.96, 3349.5 )
+position = Vector2( 2400.38, 3756.39 )
+
+[node name="room11" parent="rooms" instance=ExtResource( 1 )]
+position = Vector2( 4664.43, 3663.14 )
+rotation = -3.14159
+
+[node name="room8" parent="rooms" instance=ExtResource( 4 )]
+position = Vector2( 7193.3, 3343.57 )
+rotation = -3.14159
+
+[node name="room12" parent="rooms" instance=ExtResource( 6 )]
+position = Vector2( 8516.08, 315.251 )
+
+[node name="room13" parent="rooms" instance=ExtResource( 3 )]
+position = Vector2( 7504.23, -1804.13 )
+
+[node name="room14" parent="rooms" instance=ExtResource( 4 )]
+position = Vector2( 10393.6, -836.11 )
+
+[node name="room15" parent="rooms" instance=ExtResource( 1 )]
+position = Vector2( 650.55, 3363.4 )
+
+[node name="room16" parent="rooms" instance=ExtResource( 4 )]
+position = Vector2( 5320.89, -576.858 )
+
+[node name="room17" parent="rooms" instance=ExtResource( 3 )]
+position = Vector2( 7122.61, 3266.01 )
+
+[node name="room18" parent="rooms" instance=ExtResource( 1 )]
+position = Vector2( 10694.8, 710.663 )
+
+[node name="room19" parent="rooms" instance=ExtResource( 4 )]
+position = Vector2( 9845.15, 2766.78 )
+
+[node name="room20" parent="rooms" instance=ExtResource( 1 )]
+position = Vector2( 7611.73, 2032.59 )
+
+[node name="wooden box yellow" parent="rooms" instance=ExtResource( 2 )]
+position = Vector2( 4370.51, -422.893 )
+
+[node name="wooden box white" parent="rooms" instance=ExtResource( 5 )]
+position = Vector2( 4529.68, -125.015 )

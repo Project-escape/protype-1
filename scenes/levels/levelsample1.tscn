@@ -38,7 +38,7 @@ position = Vector2( 959.279, 540.278 )
 texture = ExtResource( 6 )
 
 [node name="room3" parent="." instance=ExtResource( 1 )]
-position = Vector2( 2278.9, -132.793 )
+position = Vector2( 2346.36, -239.943 )
 rotation = 0.0767945
 
 [node name="room4" parent="." instance=ExtResource( 3 )]
@@ -118,7 +118,6 @@ smoothing_enabled = true
 
 [node name="wooden box yellow2" parent="." instance=ExtResource( 10 )]
 position = Vector2( 5340.72, 2112.04 )
-scale = Vector2( 1, 1 )
 
 [node name="wooden box yellow" parent="." instance=ExtResource( 10 )]
 position = Vector2( 3518.32, 427.654 )
