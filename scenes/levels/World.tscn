@@ -1,0 +1,13 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://scenes/levels/levelsample.tscn" type="PackedScene" id=1]
+[ext_resource path="res://scenes/gameboy.tscn" type="PackedScene" id=2]
+
+[node name="World" type="Node2D"]
+modulate = Color( 0.133333, 0.133333, 0.133333, 1 )
+
+[node name="Node2D2" parent="." instance=ExtResource( 1 )]
+position = Vector2( 569.976, 2636.24 )
+
+[node name="gameboy" parent="." instance=ExtResource( 2 )]
+position = Vector2( 1947.7, 1642.41 )

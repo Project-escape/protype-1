@@ -1,8 +1,6 @@
 extends Node2D
 
-var gameboy = preload("res://scenes/gameboy.tscn")
-var gameboy_instance = gameboy.instance()
-signal ladder_on
+
 # Declare member variables here. Examples:
 # var a = 2
 # var b = "text"
@@ -17,17 +15,13 @@ func _ready():
 #func _process(delta):
 #	pass
 
+func wall_reset():
+	var Wall_instance = get_node(".")
+	Wall_instance.position.x = Wall_instance.position.x + (12796*2)
+	#Vector2(450,0)
+	get_parent().call_deferred("add_child",Wall_instance )
 
 func _on_Area2D_body_entered(body):
 	if body.name == "gameboy":
-		#print("ladder yes")
-		body._body_entered_ladder()
-	#gameboy_instance.ladder_on = true
-	#emit_signal("ladder_on")
-	
-
-func _on_Area2D_body_exited(body):
-	if body.name == "gameboy":
-		#print("ladder no")
-		body._body_exited_ladder()
-	#gameboy_instance.ladder_on = false
+		wall_reset()
+		$Node2D.queue_free()

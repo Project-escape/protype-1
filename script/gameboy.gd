@@ -1,10 +1,11 @@
 extends KinematicBody2D
 
-
 var velocity = Vector2(0,0)
 var coins = 0
 var cover = false
 var ladder_on = false
+#var wall =  preload("res://scenes/levels/levelsample.tscn")
+
 var SPEED = 350
 var GRAVITY = 35
 var INERTIA = 350
@@ -19,10 +20,10 @@ func _physics_process(_delta):
 		SPEED = 350
 	if ladder_on == true:
 		if Input.is_action_pressed("up") :
-			print("up")
+			#print("up")
 			velocity.y = -SPEED
 		elif Input.is_action_pressed("down") :
-			print("down")
+			#print("down")
 			velocity.y = +SPEED
 		else:
 			$Sprite.play("idle")
@@ -66,11 +67,11 @@ func _physics_process(_delta):
 		if collision.collider.is_in_group("bodies"):
 			collision.collider.apply_central_impulse(-collision.normal * INERTIA)
 
-	
 func _on_fallzone_body_entered(body):
 	get_tree().change_scene("res://gameover.tscn")
 
 func bounce():
+	$Soundland.play()
 	velocity.y = JUMPFORCE * 0.7
 	
 func _body_entered_ladder():
@@ -80,3 +81,38 @@ func _body_entered_ladder():
 func _body_exited_ladder():
 	GRAVITY = 35
 	ladder_on = false
+
+func fall_left_reset():
+	#var Wall_instance = wall.instance()
+	var player_instance = get_node(".")
+	player_instance.position.x = 0
+#Vector2(450,0)
+	get_parent().call_deferred("add_child", player_instance)
+	
+func fall_right_reset():
+	#var Wall_instance = wall.instance()
+	var player_instance = get_node(".")
+	player_instance.position.x = 12916.983
+#Vector2(450,0)
+	get_parent().call_deferred("add_child", player_instance)
+	
+func fall_y_reset():
+	#var Wall_instance = wall.instance()
+	var player_instance = get_node(".")
+	player_instance.position.y = 0
+#Vector2(450,0)
+	get_parent().call_deferred("add_child", player_instance)
+
+func _on_right_resetter_body_entered(body):
+	#if body.name == "Node2D2":
+	$SoundAaaahhh.play()
+	fall_left_reset()
+
+func _on_down_resetter_body_shape_entered(body_id, body, body_shape, area_shape):
+	$SoundAaaahhh.play()
+	fall_y_reset()
+
+func _on_left_resetter_body_entered(body):
+	#if body.name == "Node2D2":
+	$SoundAaaahhh.play()
+	fall_right_reset()
