@@ -14,8 +14,10 @@ texture = ExtResource( 2 )
 
 [node name="Light2D" type="Light2D" parent="."]
 position = Vector2( 141.718, -38.4044 )
+z_index = 2
 texture = ExtResource( 4 )
 energy = 4.0
+shadow_enabled = true
 
 [node name="BulletPoint" type="Node2D" parent="."]
 position = Vector2( 184.718, -38.4044 )
