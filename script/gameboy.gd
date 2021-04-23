@@ -101,7 +101,7 @@ func fall_y_reset():
 	var player_instance = get_node(".")
 	player_instance.position.y = 0
 #Vector2(450,0)
-	get_parent().call_deferred("add_child", player_instance)
+	#get_parent().call_deferred("add_child", player_instance)
 
 func _on_right_resetter_body_entered(body):
 	#if body.name == "Node2D2":

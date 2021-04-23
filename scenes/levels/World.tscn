@@ -1,10 +1,17 @@
-[gd_scene load_steps=3 format=2]
+[gd_scene load_steps=4 format=2]
 
 [ext_resource path="res://scenes/levels/levelsample.tscn" type="PackedScene" id=1]
 [ext_resource path="res://scenes/gameboy.tscn" type="PackedScene" id=2]
+[ext_resource path="res://assests/Environment/background.png" type="Texture" id=3]
 
 [node name="World" type="Node2D"]
 modulate = Color( 0.133333, 0.133333, 0.133333, 1 )
+
+[node name="background" type="Sprite" parent="."]
+position = Vector2( 4826.94, 2610.74 )
+scale = Vector2( 13.408, 14.3074 )
+z_index = -2
+texture = ExtResource( 3 )
 
 [node name="Node2D2" parent="." instance=ExtResource( 1 )]
 position = Vector2( 569.976, 2636.24 )

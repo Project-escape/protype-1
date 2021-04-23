@@ -42,14 +42,14 @@ animations = [ {
 "name": "jump",
 "speed": 5.0
 }, {
-"frames": [ ExtResource( 6 ), ExtResource( 1 ), ExtResource( 6 ) ],
-"loop": true,
-"name": "air",
-"speed": 5.0
-}, {
 "frames": [ SubResource( 1 ), SubResource( 2 ), SubResource( 3 ) ],
 "loop": true,
 "name": "walk",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 6 ), ExtResource( 1 ), ExtResource( 6 ) ],
+"loop": true,
+"name": "air",
 "speed": 5.0
 } ]
 
@@ -147,7 +147,7 @@ shape = SubResource( 6 )
 [node name="down_resetter" type="Area2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="down_resetter"]
-position = Vector2( -363.988, -7123.69 )
+position = Vector2( -363.988, -7628.69 )
 shape = SubResource( 7 )
 
 [node name="left_resetter" type="Area2D" parent="."]
