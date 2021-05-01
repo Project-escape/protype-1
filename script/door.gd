@@ -6,7 +6,7 @@ var closed = true
 func _ready() -> void:
 	set_process(false)
 
-func _process(delta) -> void:
+func _process(_delta) -> void:
 		if Input.is_action_just_pressed("action"):
 			$Door.play()
 			if closed == true:
@@ -21,7 +21,6 @@ func _process(delta) -> void:
 func _on_AreaDetector_body_entered(body):
 	if body.name == "gameboy":
 		set_process(true)
-
 
 func _on_AreaDetector_body_exited(body):
 	if body.name == "gameboy":

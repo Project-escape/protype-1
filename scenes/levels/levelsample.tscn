@@ -27,7 +27,7 @@ position = Vector2( 3494.53, -878.546 )
 position = Vector2( 3133.71, 1252.98 )
 
 [node name="room9" parent="rooms" instance=ExtResource( 3 )]
-position = Vector2( 8159.74, 1906.24 )
+position = Vector2( 8159.74, 1932.24 )
 rotation = -3.14159
 
 [node name="room7" parent="rooms" instance=ExtResource( 6 )]
@@ -67,7 +67,7 @@ position = Vector2( 574.355, 3363.4 )
 position = Vector2( 4474.69, -1553.56 )
 
 [node name="room16" parent="rooms" instance=ExtResource( 4 )]
-position = Vector2( 5320.89, -550.858 )
+position = Vector2( 5320.89, -530.858 )
 
 [node name="room17" parent="rooms" instance=ExtResource( 3 )]
 position = Vector2( 7122.61, 3266.01 )

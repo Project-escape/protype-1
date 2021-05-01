@@ -2,11 +2,9 @@ extends Node2D
 
 var gameboy = preload("res://scenes/gameboy.tscn")
 var gameboy_instance = gameboy.instance()
-signal ladder_on
 # Declare member variables here. Examples:
 # var a = 2
 # var b = "text"
-
 
 # Called when the node enters the scene tree for the first time.
 func _ready():

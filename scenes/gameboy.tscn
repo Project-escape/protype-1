@@ -1,4 +1,4 @@
-[gd_scene load_steps=23 format=2]
+[gd_scene load_steps=26 format=2]
 
 [ext_resource path="res://assests/Player/idle.png" type="Texture" id=1]
 [ext_resource path="res://script/gameboy.gd" type="Script" id=2]
@@ -14,6 +14,7 @@
 [ext_resource path="res://sounds/CardboardOpen.wav" type="AudioStream" id=12]
 [ext_resource path="res://sounds/Drop.wav" type="AudioStream" id=13]
 [ext_resource path="res://sounds/land.wav" type="AudioStream" id=14]
+[ext_resource path="res://assests/Player/climb.png" type="Texture" id=15]
 
 [sub_resource type="AtlasTexture" id=1]
 flags = 4
@@ -30,16 +31,21 @@ flags = 4
 atlas = ExtResource( 5 )
 region = Rect2( 444, 0, 222, 302 )
 
-[sub_resource type="SpriteFrames" id=4]
+[sub_resource type="AtlasTexture" id=11]
+flags = 4
+atlas = ExtResource( 15 )
+region = Rect2( 0, 0, 205, 316 )
+
+[sub_resource type="AtlasTexture" id=12]
+flags = 4
+atlas = ExtResource( 15 )
+region = Rect2( 205, 0, 205, 316 )
+
+[sub_resource type="SpriteFrames" id=6]
 animations = [ {
 "frames": [ ExtResource( 1 ) ],
 "loop": true,
 "name": "idle",
-"speed": 5.0
-}, {
-"frames": [ ExtResource( 1 ) ],
-"loop": true,
-"name": "jump",
 "speed": 5.0
 }, {
 "frames": [ SubResource( 1 ), SubResource( 2 ), SubResource( 3 ) ],
@@ -51,24 +57,32 @@ animations = [ {
 "loop": true,
 "name": "air",
 "speed": 5.0
+}, {
+"frames": [ ExtResource( 1 ) ],
+"loop": true,
+"name": "jump",
+"speed": 5.0
+}, {
+"frames": [ SubResource( 11 ), SubResource( 12 ) ],
+"loop": true,
+"name": "climb",
+"speed": 5.0
 } ]
 
-[sub_resource type="CapsuleShape2D" id=5]
+[sub_resource type="CapsuleShape2D" id=7]
 radius = 86.933
 height = 109.585
 
-[sub_resource type="RectangleShape2D" id=6]
+[sub_resource type="RectangleShape2D" id=8]
 extents = Vector2( 82.8588, 3555.51 )
 
-[sub_resource type="RectangleShape2D" id=7]
+[sub_resource type="RectangleShape2D" id=9]
 extents = Vector2( 6841.73, 80.3308 )
 
-[sub_resource type="RectangleShape2D" id=8]
+[sub_resource type="RectangleShape2D" id=10]
 extents = Vector2( 92.0654, 3406.24 )
 
-[node name="gameboy" type="KinematicBody2D" groups=[
-"player",
-]]
+[node name="gameboy" type="KinematicBody2D"]
 position = Vector2( 262.685, 4523.73 )
 script = ExtResource( 2 )
 
@@ -87,21 +101,21 @@ shadow_enabled = true
 [node name="Sprite" type="AnimatedSprite" parent="."]
 modulate = Color( 1, 1, 1, 0.8 )
 position = Vector2( -5.62134, 17.6515 )
-frames = SubResource( 4 )
-animation = "jump"
-playing = true
+frames = SubResource( 6 )
+animation = "climb"
 
 [node name="vest" type="Sprite" parent="."]
 position = Vector2( -6.80786, 71.3362 )
 texture = ExtResource( 8 )
 
 [node name="head phone military" type="Sprite" parent="."]
+visible = false
 position = Vector2( -3.89335, -37.8138 )
 texture = ExtResource( 9 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2( -3.76444, 15.7242 )
-shape = SubResource( 5 )
+shape = SubResource( 7 )
 
 [node name="Timer" type="Timer" parent="."]
 one_shot = true
@@ -127,7 +141,7 @@ pitch_scale = 1.2
 stream = ExtResource( 14 )
 
 [node name="Node2D" parent="." instance=ExtResource( 7 )]
-position = Vector2( -38.9091, 42.0065 )
+position = Vector2( 3.8147e-06, 42.7096 )
 
 [node name="cardboard box" type="Sprite" parent="."]
 visible = false
@@ -136,25 +150,25 @@ texture = ExtResource( 10 )
 
 [node name="Camera2D" type="Camera2D" parent="."]
 current = true
-zoom = Vector2( 3, 3 )
+zoom = Vector2( 2, 2 )
 
 [node name="right_resetter" type="Area2D" parent="."]
 
 [node name="player_on_right" type="CollisionShape2D" parent="right_resetter"]
 position = Vector2( -12828.4, 623.795 )
-shape = SubResource( 6 )
+shape = SubResource( 8 )
 
 [node name="down_resetter" type="Area2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="down_resetter"]
 position = Vector2( -363.988, -7628.69 )
-shape = SubResource( 7 )
+shape = SubResource( 9 )
 
 [node name="left_resetter" type="Area2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="left_resetter"]
 position = Vector2( 13177, -271.223 )
-shape = SubResource( 8 )
+shape = SubResource( 10 )
 [connection signal="timeout" from="Timer" to="." method="_on_Timer_timeout"]
 [connection signal="body_entered" from="right_resetter" to="." method="_on_right_resetter_body_entered"]
 [connection signal="body_shape_entered" from="down_resetter" to="." method="_on_down_resetter_body_shape_entered"]

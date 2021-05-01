@@ -9,18 +9,19 @@
 script = ExtResource( 1 )
 
 [node name="gun" type="Sprite" parent="."]
-position = Vector2( 64.994, -9.57199 )
+position = Vector2( 60.4991, 0 )
 texture = ExtResource( 2 )
 
 [node name="Light2D" type="Light2D" parent="."]
-position = Vector2( 141.718, -38.4044 )
+position = Vector2( 153.999, 0 )
 z_index = 2
 texture = ExtResource( 4 )
-energy = 4.0
+texture_scale = 1.5
+energy = 3.0
 shadow_enabled = true
 
 [node name="BulletPoint" type="Node2D" parent="."]
-position = Vector2( 184.718, -38.4044 )
+position = Vector2( 180, -35 )
 z_as_relative = false
 
 [node name="SoundShot" type="AudioStreamPlayer" parent="."]
