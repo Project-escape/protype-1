@@ -2,7 +2,7 @@
 Godot Engine\
 Memory: 16 GB RAM\
 Graphics: Nvidia GPU GeForce GTX 770 / AMD GPU Radeon R9 290\
-Storage: 70 GB available space\
+Storage: 70 GB available space
 
 # Description
 The game takes place in a weird world filled with rooms, doors, traps and chests. 
