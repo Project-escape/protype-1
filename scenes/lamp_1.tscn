@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=2]
+[gd_scene load_steps=11 format=2]
 
 [ext_resource path="res://assests/Effects/Layer 0.png" type="Texture" id=1]
 [ext_resource path="res://assests/Objects/lamp 1.png" type="Texture" id=2]
@@ -8,7 +8,7 @@
 [ext_resource path="res://sounds/Light Bulb Breaking.wav" type="AudioStream" id=6]
 
 [sub_resource type="CircleShape2D" id=1]
-radius = 1707.95
+radius = 432.163
 
 [sub_resource type="SpriteFrames" id=2]
 animations = [ {
@@ -18,7 +18,10 @@ animations = [ {
 "speed": 10.0
 } ]
 
-[sub_resource type="CapsuleShape2D" id=3]
+[sub_resource type="CircleShape2D" id=3]
+radius = 1703.17
+
+[sub_resource type="CapsuleShape2D" id=4]
 radius = 41.5322
 height = 96.7528
 
@@ -42,20 +45,19 @@ shadow_enabled = true
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
 shape = SubResource( 1 )
 
+[node name="AnimatedSprite" type="AnimatedSprite" parent="."]
+frames = SubResource( 2 )
+
 [node name="Area2D2" type="Area2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D2"]
-position = Vector2( 2.37842, -2.37836 )
-shape = SubResource( 1 )
-
-[node name="AnimatedSprite" type="AnimatedSprite" parent="."]
-frames = SubResource( 2 )
+shape = SubResource( 3 )
 
 [node name="hit box" type="Area2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="hit box"]
 position = Vector2( -17.9797, -23.9729 )
-shape = SubResource( 3 )
+shape = SubResource( 4 )
 
 [node name="on" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource( 5 )
