@@ -29,6 +29,7 @@ texture = ExtResource( 3 )
 
 [node name="door2" parent="." instance=ExtResource( 2 )]
 position = Vector2( 144.525, 353.841 )
+rotation = 3.14159
 
 [node name="door" parent="." instance=ExtResource( 2 )]
 position = Vector2( 2698.93, 730.689 )
@@ -57,5 +58,4 @@ position = Vector2( 1438, 126.157 )
 shape = SubResource( 4 )
 
 [node name="LightOccluder2D" type="LightOccluder2D" parent="."]
-z_index = 2
 occluder = SubResource( 5 )

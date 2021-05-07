@@ -8,11 +8,9 @@ var can_fire = true
 func _process(_delta):
 	look_at(get_global_mouse_position())
 	if Input.is_action_pressed("right"):
-		#$gun.flip_h = false
 		$gun.flip_v = false
 		$BulletPoint.position = Vector2(180,-35)
 	elif Input.is_action_pressed("left"):
-		#$gun.flip_h = true
 		$gun.flip_v = true
 		$BulletPoint.position = Vector2(180,35)
 	if Input.is_action_pressed("fire") and can_fire:

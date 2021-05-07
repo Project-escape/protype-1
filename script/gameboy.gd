@@ -76,21 +76,16 @@ func _body_exited_ladder():
 	ladder_on = false
 
 func fall_left_reset():
-	#var Wall_instance = wall.instance()
 	var player_instance = get_node(".")
 	player_instance.position.x = 0
-#Vector2(450,0)
 	get_parent().call_deferred("add_child", player_instance)
 	
 func fall_right_reset():
-	#var Wall_instance = wall.instance()
 	var player_instance = get_node(".")
 	player_instance.position.x = 12916.983
-#Vector2(450,0)
 	get_parent().call_deferred("add_child", player_instance)
 	
 func fall_y_reset():
-	#var Wall_instance = wall.instance()
 	var player_instance = get_node(".")
 	player_instance.position.y = 0
 

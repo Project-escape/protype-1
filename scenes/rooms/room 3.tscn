@@ -17,6 +17,7 @@ extents = Vector2( 684.847, 26.0159 )
 extents = Vector2( 439.526, 25.6603 )
 
 [sub_resource type="OccluderPolygon2D" id=5]
+cull_mode = 1
 polygon = PoolVector2Array( 356.913, -745.498, 1739.07, -742.489, 1740.57, 1080.79, 356.213, 1080.79, 356.59, -744.602, 425.543, -692.466, 423.637, 1028.28, 1669.52, 1031.28, 1671.02, -692.733, 425.543, -692.466 )
 
 [node name="room2" type="Node2D"]
@@ -28,7 +29,7 @@ texture = ExtResource( 3 )
 
 [node name="door2" parent="." instance=ExtResource( 2 )]
 position = Vector2( 650.429, -690.004 )
-rotation = 1.5708
+rotation = 4.71239
 
 [node name="door" parent="." instance=ExtResource( 2 )]
 position = Vector2( 1662.82, 830.618 )

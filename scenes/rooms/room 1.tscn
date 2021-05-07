@@ -4,21 +4,21 @@
 [ext_resource path="res://scenes/door.tscn" type="PackedScene" id=2]
 [ext_resource path="res://assests/Environment/background wall.png" type="Texture" id=3]
 
-[sub_resource type="OccluderPolygon2D" id=1]
-cull_mode = 1
-polygon = PoolVector2Array( 73.5937, 99.8173, 1454.42, 98.0569, 1456.42, 982.057, 76.4193, 986.057, 73.8095, 100.149, 144.779, 155.569, 140.419, 922.057, 1388.42, 928.057, 1386.42, 152.057, 145, 155.259 )
-
-[sub_resource type="RectangleShape2D" id=2]
+[sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 33.5186, 203.324 )
 
-[sub_resource type="RectangleShape2D" id=3]
+[sub_resource type="RectangleShape2D" id=2]
 extents = Vector2( 33.1976, 205.416 )
 
-[sub_resource type="RectangleShape2D" id=4]
+[sub_resource type="RectangleShape2D" id=3]
 extents = Vector2( 676.607, 26.0159 )
 
-[sub_resource type="RectangleShape2D" id=5]
+[sub_resource type="RectangleShape2D" id=4]
 extents = Vector2( 690.836, 25.6603 )
+
+[sub_resource type="OccluderPolygon2D" id=5]
+cull_mode = 1
+polygon = PoolVector2Array( 73.5937, 99.8173, 1454.42, 98.0569, 1456.42, 982.057, 76.4193, 986.057, 73.8095, 100.149, 144.779, 155.569, 140.419, 922.057, 1388.42, 928.057, 1386.42, 152.057, 145, 155.259 )
 
 [node name="room2" type="Node2D"]
 
@@ -30,6 +30,7 @@ texture = ExtResource( 3 )
 
 [node name="door2" parent="." instance=ExtResource( 2 )]
 position = Vector2( 143.74, 732.282 )
+rotation = 3.14159
 
 [node name="door" parent="." instance=ExtResource( 2 )]
 position = Vector2( 1384.94, 351.942 )
@@ -40,23 +41,23 @@ position = Vector2( 766.1, 542.906 )
 z_index = 2
 texture = ExtResource( 1 )
 
-[node name="LightOccluder2D" type="LightOccluder2D" parent="."]
-occluder = SubResource( 1 )
-
 [node name="StaticBody2D" type="StaticBody2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
 position = Vector2( 1421.06, 757.269 )
-shape = SubResource( 2 )
+shape = SubResource( 1 )
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="StaticBody2D"]
 position = Vector2( 113.055, 328.053 )
-shape = SubResource( 3 )
+shape = SubResource( 2 )
 
 [node name="CollisionShape2D3" type="CollisionShape2D" parent="StaticBody2D"]
 position = Vector2( 760.698, 957.509 )
-shape = SubResource( 4 )
+shape = SubResource( 3 )
 
 [node name="CollisionShape2D4" type="CollisionShape2D" parent="StaticBody2D"]
 position = Vector2( 767.242, 130.825 )
-shape = SubResource( 5 )
+shape = SubResource( 4 )
+
+[node name="LightOccluder2D" type="LightOccluder2D" parent="."]
+occluder = SubResource( 5 )

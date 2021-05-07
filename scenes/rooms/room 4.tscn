@@ -39,6 +39,7 @@ rotation = 1.5708
 
 [node name="door" parent="." instance=ExtResource( 2 )]
 position = Vector2( -990.854, -77.0816 )
+rotation = 3.14159
 
 [node name="wall 4" type="Sprite" parent="."]
 position = Vector2( 339.711, 185.108 )

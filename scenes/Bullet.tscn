@@ -6,7 +6,7 @@
 [sub_resource type="CapsuleShape2D" id=1]
 height = 12.2953
 
-[node name="RigidBody2D" type="RigidBody2D"]
+[node name="bullet" type="RigidBody2D"]
 contacts_reported = 1
 contact_monitor = true
 script = ExtResource( 2 )

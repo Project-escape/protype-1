@@ -33,7 +33,7 @@ script = ExtResource( 1 )
 scale = Vector2( 0.15, 0.15 )
 frames = SubResource( 1 )
 animation = "crawl"
-frame = 5
+frame = 3
 playing = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
@@ -69,6 +69,7 @@ one_shot = true
 
 [node name="SoundSquash" type="AudioStreamPlayer" parent="."]
 volume_db = -2.0
+
 [connection signal="body_entered" from="top_checker" to="." method="_on_top_checker_body_entered"]
 [connection signal="body_entered" from="sides_checker" to="." method="_on_sides_checker_body_entered"]
 [connection signal="timeout" from="Timer" to="." method="_on_Timer_timeout"]

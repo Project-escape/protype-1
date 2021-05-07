@@ -16,8 +16,8 @@ texture = ExtResource( 2 )
 position = Vector2( 153.999, 0 )
 z_index = 2
 texture = ExtResource( 4 )
-texture_scale = 1.5
-energy = 3.0
+texture_scale = 2.0
+energy = 7.0
 shadow_enabled = true
 
 [node name="BulletPoint" type="Node2D" parent="."]
