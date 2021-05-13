@@ -17,10 +17,10 @@ extents = Vector2( 676.607, 26.0159 )
 extents = Vector2( 690.836, 25.6603 )
 
 [sub_resource type="OccluderPolygon2D" id=5]
-cull_mode = 1
-polygon = PoolVector2Array( 73.5937, 99.8173, 1454.42, 98.0569, 1456.42, 982.057, 76.4193, 986.057, 73.8095, 100.149, 144.779, 155.569, 140.419, 922.057, 1388.42, 928.057, 1386.42, 152.057, 145, 155.259 )
+cull_mode = 2
+polygon = PoolVector2Array( 74.1357, 937.05, 75.55, 983.719, 144.139, 928.565, 144.139, 155.763, 1386.77, 155.763, 1388.18, 928.554, 144.417, 929.701, 74.5028, 983.001, 1459.22, 984.415, 1457.81, 103.37, 75.8276, 102.662 )
 
-[node name="room2" type="Node2D"]
+[node name="room 1" type="Node2D"]
 
 [node name="Sprite" type="Sprite" parent="."]
 show_behind_parent = true
@@ -36,7 +36,6 @@ rotation = 3.14159
 position = Vector2( 1384.94, 351.942 )
 
 [node name="wall1" type="Sprite" parent="."]
-light_mask = 16
 position = Vector2( 766.1, 542.906 )
 z_index = 2
 texture = ExtResource( 1 )

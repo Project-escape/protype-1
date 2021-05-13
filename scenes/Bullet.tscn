@@ -17,4 +17,5 @@ shape = SubResource( 1 )
 
 [node name="Sprite" type="Sprite" parent="."]
 texture = ExtResource( 1 )
+
 [connection signal="body_entered" from="." to="." method="_on_RigidBody2D_body_entered"]

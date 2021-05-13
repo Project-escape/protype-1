@@ -33,14 +33,14 @@ animations = [ {
 "frames": [ SubResource( 1 ), SubResource( 2 ), SubResource( 3 ), SubResource( 4 ), SubResource( 5 ) ],
 "loop": true,
 "name": "fire",
-"speed": 5.0
+"speed": 3.0
 } ]
 
 [node name="explotion" type="AnimatedSprite"]
 position = Vector2( 1.22821, 0.345215 )
 frames = SubResource( 6 )
 animation = "fire"
-frame = 3
+frame = 2
 playing = true
 script = ExtResource( 2 )
 

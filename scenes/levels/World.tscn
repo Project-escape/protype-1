@@ -1,20 +1,21 @@
 [gd_scene load_steps=4 format=2]
 
-[ext_resource path="res://scenes/levels/levelsample.tscn" type="PackedScene" id=1]
-[ext_resource path="res://scenes/gameboy.tscn" type="PackedScene" id=2]
+[ext_resource path="res://scenes/levels/level 1 chests.tscn" type="PackedScene" id=1]
+[ext_resource path="res://sounds/Down Hearted Blues 1923.wav" type="AudioStream" id=2]
 [ext_resource path="res://assests/Environment/background.png" type="Texture" id=3]
 
 [node name="World" type="Node2D"]
 modulate = Color( 0.0470588, 0.0470588, 0.0470588, 1 )
 
 [node name="background" type="Sprite" parent="."]
-position = Vector2( 4826.94, 2610.74 )
-scale = Vector2( 13.408, 14.3074 )
+position = Vector2( 13532.9, 7075.02 )
+scale = Vector2( 16.3924, 17.492 )
 z_index = -2
 texture = ExtResource( 3 )
 
-[node name="Node2D2" parent="." instance=ExtResource( 1 )]
-position = Vector2( 569.976, 2636.24 )
+[node name="level 1 chests" parent="." instance=ExtResource( 1 )]
+position = Vector2( 6102.55, 2536.06 )
 
-[node name="gameboy" parent="." instance=ExtResource( 2 )]
-position = Vector2( 3359.54, 1600.58 )
+[node name="bg2" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 2 )
+autoplay = true

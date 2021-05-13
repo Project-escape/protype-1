@@ -1,26 +1,13 @@
-[gd_scene load_steps=16 format=2]
+[gd_scene load_steps=5 format=2]
 
 [ext_resource path="res://script/coin.gd" type="Script" id=1]
-[ext_resource path="res://assests/coins/Gold/Gold_9.png" type="Texture" id=2]
-[ext_resource path="res://assests/coins/Gold/Gold_2.png" type="Texture" id=3]
-[ext_resource path="res://assests/coins/Gold/Gold_1.png" type="Texture" id=4]
-[ext_resource path="res://assests/coins/Gold/Gold_6.png" type="Texture" id=5]
-[ext_resource path="res://assests/coins/Gold/Gold_7.png" type="Texture" id=6]
-[ext_resource path="res://assests/coins/Gold/Gold_5.png" type="Texture" id=7]
-[ext_resource path="res://assests/coins/Gold/Gold_3.png" type="Texture" id=8]
-[ext_resource path="res://assests/coins/Gold/Gold_10.png" type="Texture" id=9]
-[ext_resource path="res://assests/coins/Gold/Gold_4.png" type="Texture" id=10]
-[ext_resource path="res://assests/coins/Gold/Gold_8.png" type="Texture" id=11]
-[ext_resource path="res://sounds/coin.wav" type="AudioStream" id=12]
-
-
 
 [sub_resource type="CircleShape2D" id=1]
 radius = 147.446
 
 [sub_resource type="SpriteFrames" id=2]
 animations = [ {
-"frames": [ ExtResource( 4 ), ExtResource( 3 ), ExtResource( 8 ), ExtResource( 10 ), ExtResource( 7 ), ExtResource( 5 ), ExtResource( 6 ), ExtResource( 11 ), ExtResource( 2 ), ExtResource( 9 ) ],
+"frames": [ null, null, null, null, null, null, null, null, null, null ],
 "loop": true,
 "name": "spin",
 "speed": 5.0
@@ -56,14 +43,15 @@ shape = SubResource( 1 )
 scale = Vector2( 0.5, 0.5 )
 frames = SubResource( 2 )
 animation = "spin"
-frame = 5
+frame = 8
 playing = true
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 anims/bounce = SubResource( 3 )
 
 [node name="SoundCoinCollect" type="AudioStreamPlayer" parent="."]
-stream = ExtResource( 12 )
 volume_db = -8.0
+
 [connection signal="body_entered" from="." to="." method="_on_coin_body_entered"]
+[connection signal="coin_collected" from="." to="." method="_on_coin_coin_collected"]
 [connection signal="animation_finished" from="AnimationPlayer" to="." method="_on_AnimationPlayer_animation_finished"]

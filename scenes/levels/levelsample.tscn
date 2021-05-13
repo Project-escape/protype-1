@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=2]
+[gd_scene load_steps=15 format=2]
 
 [ext_resource path="res://scenes/rooms/room 1.tscn" type="PackedScene" id=1]
 [ext_resource path="res://scenes/wooden box yellow.tscn" type="PackedScene" id=2]
@@ -10,6 +10,10 @@
 [ext_resource path="res://scenes/oil_barrel.tscn" type="PackedScene" id=8]
 [ext_resource path="res://scenes/lamp_1.tscn" type="PackedScene" id=9]
 [ext_resource path="res://scenes/weapon_box.tscn" type="PackedScene" id=10]
+[ext_resource path="res://scenes/rooms/room 5.tscn" type="PackedScene" id=11]
+[ext_resource path="res://scenes/rooms/room 6.tscn" type="PackedScene" id=12]
+[ext_resource path="res://scenes/gameboy.tscn" type="PackedScene" id=13]
+[ext_resource path="res://scenes/rooms/room 8.tscn" type="PackedScene" id=14]
 
 [node name="Node2D" type="Node2D"]
 show_behind_parent = true
@@ -50,8 +54,13 @@ position = Vector2( 2311.49, 3756.39 )
 position = Vector2( 4664.43, 3663.14 )
 rotation = -3.14159
 
+[node name="room 6" parent="rooms" instance=ExtResource( 14 )]
+position = Vector2( 7220.14, 3834.03 )
+rotation = -3.14159
+
 [node name="room8" parent="rooms" instance=ExtResource( 4 )]
-position = Vector2( 7193.3, 3343.57 )
+visible = false
+position = Vector2( 7193.3, 3330.87 )
 rotation = -3.14159
 
 [node name="room12" parent="rooms" instance=ExtResource( 6 )]
@@ -66,17 +75,20 @@ position = Vector2( 10350.8, -622.294 )
 [node name="room15" parent="rooms" instance=ExtResource( 1 )]
 position = Vector2( 574.355, 3363.4 )
 
-[node name="ladder" parent="rooms/room15" instance=ExtResource( 7 )]
-position = Vector2( 4474.69, -1553.56 )
-
 [node name="room16" parent="rooms" instance=ExtResource( 4 )]
 position = Vector2( 5320.89, -530.858 )
+
+[node name="room21" parent="rooms" instance=ExtResource( 11 )]
+position = Vector2( 11549.4, 3116.79 )
 
 [node name="room17" parent="rooms" instance=ExtResource( 3 )]
 position = Vector2( 7122.61, 3266.01 )
 
+[node name="ladder2" parent="rooms" instance=ExtResource( 7 )]
+position = Vector2( 5049.04, 1809.84 )
+
 [node name="ladder" parent="rooms" instance=ExtResource( 7 )]
-position = Vector2( 12128.6, 1264.43 )
+position = Vector2( 11589.8, 4245.69 )
 
 [node name="room18" parent="rooms" instance=ExtResource( 1 )]
 position = Vector2( 10482.5, 756.685 )
@@ -105,14 +117,14 @@ position = Vector2( 7196.01, 254.259 )
 [node name="ladder4" parent="." instance=ExtResource( 7 )]
 position = Vector2( 10444, 262.259 )
 
-[node name="ladder5" parent="." instance=ExtResource( 7 )]
-position = Vector2( 12254.1, 490.314 )
+[node name="ladder10" parent="." instance=ExtResource( 7 )]
+position = Vector2( 12401.2, -1188.36 )
 
-[node name="ladder2" parent="ladder5" instance=ExtResource( 7 )]
-position = Vector2( 25.373, -798.667 )
+[node name="ladder5" parent="." instance=ExtResource( 7 )]
+position = Vector2( 9807.58, 1891.15 )
 
 [node name="ladder6" parent="." instance=ExtResource( 7 )]
-position = Vector2( 11822.6, 1955.4 )
+position = Vector2( 11653.6, 1958.4 )
 
 [node name="ladder8" parent="." instance=ExtResource( 7 )]
 position = Vector2( 9467.51, 2211.75 )
@@ -261,29 +273,30 @@ position = Vector2( 1411.96, 2520.18 )
 [node name="lamp_8" parent="Node2D" instance=ExtResource( 9 )]
 position = Vector2( 2937.55, 2525.27 )
 
-[node name="lamp_1" parent="." instance=ExtResource( 9 )]
-position = Vector2( 11871.7, -1161.59 )
+[node name="lamp_10" parent="Node2D" instance=ExtResource( 9 )]
+position = Vector2( 5252.25, 90.8998 )
 
-[node name="lamp_1" parent="lamp_1" instance=ExtResource( 9 )]
-position = Vector2( -1549.97, -129.7 )
+[node name="lamp_11" parent="Node2D" instance=ExtResource( 9 )]
+position = Vector2( 4141.18, 1706.48 )
 
-[node name="lamp_2" parent="lamp_1" instance=ExtResource( 9 )]
-position = Vector2( -1763.07, 1144.65 )
+[node name="lamp_12" parent="Node2D" instance=ExtResource( 9 )]
+position = Vector2( 6258.16, 3668.3 )
 
-[node name="lamp_3" parent="lamp_1" instance=ExtResource( 9 )]
-position = Vector2( -517.152, 3447.7 )
+[node name="lamp_13" parent="Node2D" instance=ExtResource( 9 )]
+position = Vector2( 2804.59, 3749.51 )
 
-[node name="lamp_4" parent="lamp_1" instance=ExtResource( 9 )]
-position = Vector2( -3997.63, 3528.91 )
+[node name="lamp_14" parent="Node2D" instance=ExtResource( 9 )]
+visible = false
+position = Vector2( 1528.88, 3907.28 )
 
-[node name="lamp_5" parent="lamp_1" instance=ExtResource( 9 )]
-position = Vector2( -5273.34, 3686.68 )
+[node name="lamp_15" parent="Node2D" instance=ExtResource( 9 )]
+position = Vector2( 4637.16, 4970.16 )
 
-[node name="lamp_6" parent="lamp_1" instance=ExtResource( 9 )]
-position = Vector2( -2165.06, 4749.56 )
+[node name="lamp_16" parent="Node2D" instance=ExtResource( 9 )]
+position = Vector2( -181.148, 5473.58 )
 
-[node name="lamp_7" parent="lamp_1" instance=ExtResource( 9 )]
-position = Vector2( -6983.37, 5252.98 )
+[node name="lamp_9" parent="Node2D" instance=ExtResource( 9 )]
+position = Vector2( 7843.56, 1795.3 )
 
 [node name="lamp_2" parent="." instance=ExtResource( 9 )]
 position = Vector2( 2625.66, -1377.39 )
@@ -295,67 +308,73 @@ position = Vector2( 3349.51, 4095.97 )
 position = Vector2( 860.466, 3676.9 )
 
 [node name="lamp_5" parent="." instance=ExtResource( 9 )]
-position = Vector2( 1406.53, 2191.09 )
+position = Vector2( 1406.53, 2178.39 )
 
 [node name="lamp_6" parent="." instance=ExtResource( 9 )]
 position = Vector2( 7730.73, -69.3691 )
 
 [node name="lamp_7" parent="." instance=ExtResource( 9 )]
-position = Vector2( 10715, 1098.96 )
+position = Vector2( 10876.6, 1098.96 )
 
 [node name="lamp_8" parent="." instance=ExtResource( 9 )]
 position = Vector2( 949.361, -1351.99 )
 
+[node name="weapon_box2" parent="." instance=ExtResource( 10 )]
+position = Vector2( 1898.74, -875.285 )
+
+[node name="weapon_box3" parent="." instance=ExtResource( 10 )]
+position = Vector2( 629.64, 304.63 )
+
+[node name="weapon_box4" parent="." instance=ExtResource( 10 )]
+position = Vector2( 1680.38, 2674.53 )
+
+[node name="weapon_box5" parent="." instance=ExtResource( 10 )]
+position = Vector2( 1789.05, 4154.95 )
+
+[node name="weapon_box6" parent="." instance=ExtResource( 10 )]
+position = Vector2( 3727.06, 4545.44 )
+
+[node name="weapon_box7" parent="." instance=ExtResource( 10 )]
+position = Vector2( 5781.74, 3895.14 )
+
+[node name="weapon_box11" parent="." instance=ExtResource( 10 )]
+position = Vector2( 10502.7, 3657.08 )
+
+[node name="weapon_box8" parent="." instance=ExtResource( 10 )]
+position = Vector2( 11623.6, 1545.86 )
+
+[node name="weapon_box9" parent="." instance=ExtResource( 10 )]
+position = Vector2( 11011.3, 266.49 )
+
+[node name="weapon_box10" parent="." instance=ExtResource( 10 )]
+position = Vector2( 8137.41, -842.51 )
+
+[node name="weapon_box12" parent="." instance=ExtResource( 10 )]
+position = Vector2( 2717.6, 1510.81 )
+
+[node name="weapon_box13" parent="." instance=ExtResource( 10 )]
+position = Vector2( 9227.11, 1287.59 )
+
+[node name="weapon_box14" parent="." instance=ExtResource( 10 )]
+position = Vector2( 5694.7, 1641.41 )
+
+[node name="weapon_box15" parent="." instance=ExtResource( 10 )]
+position = Vector2( 5987.02, 357.13 )
+
+[node name="weapon_box16" parent="." instance=ExtResource( 10 )]
+position = Vector2( 3794.85, 2141.24 )
+
+[node name="weapon_box17" parent="." instance=ExtResource( 10 )]
+position = Vector2( 8757.55, 2846.52 )
+
+[node name="weapon_box18" parent="." instance=ExtResource( 10 )]
+position = Vector2( 7502.69, 4056.44 )
+
 [node name="weapon_box" parent="." instance=ExtResource( 10 )]
 position = Vector2( 3018.36, -900.2 )
 
-[node name="weapon_box" parent="weapon_box" instance=ExtResource( 10 )]
-position = Vector2( -1119.62, 24.9146 )
+[node name="room 6" parent="." instance=ExtResource( 12 )]
+position = Vector2( 12215.9, 81.4746 )
 
-[node name="weapon_box2" parent="weapon_box" instance=ExtResource( 10 )]
-position = Vector2( -2388.72, 1204.83 )
-
-[node name="weapon_box3" parent="weapon_box" instance=ExtResource( 10 )]
-position = Vector2( -1337.98, 3574.73 )
-
-[node name="weapon_box4" parent="weapon_box" instance=ExtResource( 10 )]
-position = Vector2( -1229.31, 5055.15 )
-
-[node name="weapon_box5" parent="weapon_box" instance=ExtResource( 10 )]
-position = Vector2( 708.697, 5445.64 )
-
-[node name="weapon_box6" parent="weapon_box" instance=ExtResource( 10 )]
-position = Vector2( 2763.38, 4795.34 )
-
-[node name="weapon_box7" parent="weapon_box" instance=ExtResource( 10 )]
-position = Vector2( 4484.33, 4956.64 )
-
-[node name="weapon_box" parent="weapon_box/weapon_box7" instance=ExtResource( 10 )]
-position = Vector2( 2999.99, -399.363 )
-
-[node name="weapon_box2" parent="weapon_box/weapon_box7" instance=ExtResource( 10 )]
-position = Vector2( 4120.95, -2510.58 )
-
-[node name="weapon_box3" parent="weapon_box/weapon_box7" instance=ExtResource( 10 )]
-position = Vector2( 3508.58, -3789.95 )
-
-[node name="weapon_box4" parent="weapon_box/weapon_box7" instance=ExtResource( 10 )]
-position = Vector2( 634.715, -4898.95 )
-
-[node name="weapon_box5" parent="weapon_box/weapon_box7" instance=ExtResource( 10 )]
-position = Vector2( -4785.09, -2545.63 )
-
-[node name="weapon_box6" parent="weapon_box/weapon_box7" instance=ExtResource( 10 )]
-position = Vector2( 1724.42, -2768.85 )
-
-[node name="weapon_box7" parent="weapon_box/weapon_box7" instance=ExtResource( 10 )]
-position = Vector2( -1807.99, -2415.03 )
-
-[node name="weapon_box8" parent="weapon_box/weapon_box7" instance=ExtResource( 10 )]
-position = Vector2( -1515.67, -3699.31 )
-
-[node name="weapon_box9" parent="weapon_box/weapon_box7" instance=ExtResource( 10 )]
-position = Vector2( -3707.84, -1915.2 )
-
-[node name="weapon_box10" parent="weapon_box/weapon_box7" instance=ExtResource( 10 )]
-position = Vector2( 1254.86, -1209.92 )
+[node name="gameboy" parent="." instance=ExtResource( 13 )]
+position = Vector2( 4431.68, -495.904 )

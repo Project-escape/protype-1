@@ -1,0 +1,105 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://scenes/levels/level 1 objects.tscn" type="PackedScene" id=1]
+[ext_resource path="res://scenes/weapon_box.tscn" type="PackedScene" id=2]
+
+[node name="level 1 chests" type="Node2D"]
+
+[node name="level 1 objects" parent="." instance=ExtResource( 1 )]
+position = Vector2( 239.585, -76.2036 )
+
+[node name="weapon_box2" parent="level 1 objects" instance=ExtResource( 2 )]
+position = Vector2( 3751.1, 2325.46 )
+
+[node name="weapon_box" parent="level 1 objects/weapon_box2" instance=ExtResource( 2 )]
+position = Vector2( -256.965, 1294.56 )
+
+[node name="weapon_box2" parent="level 1 objects/weapon_box2" instance=ExtResource( 2 )]
+position = Vector2( -2013.87, 3312.96 )
+
+[node name="weapon_box" parent="level 1 objects/weapon_box2/weapon_box2" instance=ExtResource( 2 )]
+position = Vector2( -1105.46, 3395.04 )
+
+[node name="weapon_box2" parent="level 1 objects/weapon_box2/weapon_box2" instance=ExtResource( 2 )]
+position = Vector2( 991.664, 4768.97 )
+
+[node name="weapon_box" parent="level 1 objects/weapon_box2/weapon_box2/weapon_box2" instance=ExtResource( 2 )]
+position = Vector2( 1279.85, -454.396 )
+
+[node name="weapon_box2" parent="level 1 objects/weapon_box2/weapon_box2/weapon_box2" instance=ExtResource( 2 )]
+position = Vector2( 2062.52, -342.177 )
+
+[node name="weapon_box3" parent="level 1 objects/weapon_box2/weapon_box2/weapon_box2" instance=ExtResource( 2 )]
+position = Vector2( 5800.14, -1317.54 )
+
+[node name="weapon_box" parent="level 1 objects/weapon_box2/weapon_box2/weapon_box2/weapon_box3" instance=ExtResource( 2 )]
+position = Vector2( -1358.13, 1173.6 )
+
+[node name="weapon_box5" parent="level 1 objects/weapon_box2/weapon_box2/weapon_box2/weapon_box3/weapon_box" instance=ExtResource( 2 )]
+position = Vector2( 5618.78, -1986.61 )
+
+[node name="weapon_box" parent="level 1 objects/weapon_box2/weapon_box2/weapon_box2/weapon_box3/weapon_box/weapon_box5" instance=ExtResource( 2 )]
+position = Vector2( 1150.65, -1582.37 )
+
+[node name="weapon_box4" parent="level 1 objects/weapon_box2/weapon_box2/weapon_box2/weapon_box3/weapon_box/weapon_box5" instance=ExtResource( 2 )]
+position = Vector2( -684.397, -6484.16 )
+
+[node name="weapon_box" parent="level 1 objects/weapon_box2/weapon_box2/weapon_box2/weapon_box3/weapon_box/weapon_box5/weapon_box4" instance=ExtResource( 2 )]
+position = Vector2( -3159.71, -49.2626 )
+
+[node name="weapon_box" parent="level 1 objects/weapon_box2/weapon_box2/weapon_box2/weapon_box3/weapon_box/weapon_box5/weapon_box4/weapon_box" instance=ExtResource( 2 )]
+position = Vector2( 1797.55, 3165.18 )
+
+[node name="weapon_box2" parent="level 1 objects/weapon_box2/weapon_box2/weapon_box2/weapon_box3/weapon_box/weapon_box5/weapon_box4/weapon_box/weapon_box" instance=ExtResource( 2 )]
+position = Vector2( -3166.7, -1312.31 )
+
+[node name="weapon_box" parent="level 1 objects/weapon_box2/weapon_box2/weapon_box2/weapon_box3/weapon_box/weapon_box5/weapon_box4/weapon_box/weapon_box/weapon_box2" instance=ExtResource( 2 )]
+position = Vector2( -687.965, 63.3977 )
+
+[node name="weapon_box" parent="level 1 objects/weapon_box2/weapon_box2/weapon_box2/weapon_box3/weapon_box/weapon_box5/weapon_box4/weapon_box/weapon_box/weapon_box2/weapon_box" instance=ExtResource( 2 )]
+position = Vector2( -1660.43, 2081.18 )
+
+[node name="weapon_box2" parent="level 1 objects/weapon_box2/weapon_box2/weapon_box2/weapon_box3/weapon_box/weapon_box5/weapon_box4/weapon_box/weapon_box/weapon_box2/weapon_box" instance=ExtResource( 2 )]
+position = Vector2( -4363.85, 3266.9 )
+
+[node name="weapon_box" parent="level 1 objects/weapon_box2/weapon_box2/weapon_box2/weapon_box3/weapon_box/weapon_box5/weapon_box4/weapon_box/weapon_box/weapon_box2/weapon_box/weapon_box2" instance=ExtResource( 2 )]
+position = Vector2( 3441.88, -2081.69 )
+
+[node name="weapon_box" parent="level 1 objects/weapon_box2/weapon_box2/weapon_box2/weapon_box3/weapon_box/weapon_box5/weapon_box4/weapon_box/weapon_box/weapon_box2/weapon_box/weapon_box2/weapon_box" instance=ExtResource( 2 )]
+position = Vector2( 59.6133, 1734.98 )
+
+[node name="weapon_box" parent="level 1 objects/weapon_box2/weapon_box2/weapon_box2/weapon_box3/weapon_box/weapon_box5/weapon_box4/weapon_box/weapon_box/weapon_box2/weapon_box/weapon_box2/weapon_box/weapon_box" instance=ExtResource( 2 )]
+position = Vector2( 3033.54, 329.344 )
+
+[node name="weapon_box" parent="level 1 objects/weapon_box2/weapon_box2/weapon_box2/weapon_box3/weapon_box/weapon_box5/weapon_box4/weapon_box/weapon_box/weapon_box2/weapon_box/weapon_box2/weapon_box/weapon_box/weapon_box" instance=ExtResource( 2 )]
+position = Vector2( 933.108, -1736.28 )
+
+[node name="weapon_box" parent="level 1 objects/weapon_box2/weapon_box2/weapon_box2/weapon_box3/weapon_box/weapon_box5/weapon_box4/weapon_box/weapon_box/weapon_box2/weapon_box/weapon_box2/weapon_box/weapon_box/weapon_box/weapon_box" instance=ExtResource( 2 )]
+position = Vector2( 2991.72, 598.802 )
+
+[node name="weapon_box" parent="level 1 objects/weapon_box2/weapon_box2/weapon_box2/weapon_box3/weapon_box/weapon_box5/weapon_box4/weapon_box/weapon_box" instance=ExtResource( 2 )]
+position = Vector2( -1447.1, 5569.49 )
+
+[node name="weapon_box3" parent="level 1 objects/weapon_box2/weapon_box2/weapon_box2/weapon_box3/weapon_box/weapon_box5" instance=ExtResource( 2 )]
+position = Vector2( 1444.95, -5881.03 )
+
+[node name="weapon_box2" parent="level 1 objects/weapon_box2/weapon_box2/weapon_box2/weapon_box3/weapon_box/weapon_box5" instance=ExtResource( 2 )]
+position = Vector2( 3780.97, -1976.23 )
+
+[node name="weapon_box" parent="level 1 objects/weapon_box2/weapon_box2/weapon_box2/weapon_box3/weapon_box/weapon_box5/weapon_box2" instance=ExtResource( 2 )]
+position = Vector2( -243.506, -1780.66 )
+
+[node name="weapon_box4" parent="level 1 objects/weapon_box2/weapon_box2/weapon_box2/weapon_box3/weapon_box" instance=ExtResource( 2 )]
+position = Vector2( 8846.53, -214.343 )
+
+[node name="weapon_box3" parent="level 1 objects/weapon_box2/weapon_box2/weapon_box2/weapon_box3/weapon_box" instance=ExtResource( 2 )]
+position = Vector2( 5720.72, 226.317 )
+
+[node name="weapon_box2" parent="level 1 objects/weapon_box2/weapon_box2/weapon_box2/weapon_box3/weapon_box" instance=ExtResource( 2 )]
+position = Vector2( 4777.59, 157.97 )
+
+[node name="weapon_box" parent="level 1 objects/weapon_box2/weapon_box2/weapon_box2/weapon_box3/weapon_box" instance=ExtResource( 2 )]
+position = Vector2( 3518.97, -1590.55 )
+
+[node name="weapon_box" parent="level 1 objects" instance=ExtResource( 2 )]
+position = Vector2( 853.019, 3627.59 )

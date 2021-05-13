@@ -20,7 +20,7 @@ extents = Vector2( 1334.89, 25.6603 )
 cull_mode = 1
 polygon = PoolVector2Array( 73.5029, 99.6752, 2772.22, 99.6752, 2773.8, 982.27, 74.7777, 982.27, 74.2756, 675.138, 73.3352, 99.9188, 139.861, 153.647, 143.036, 926.711, 2704.84, 928.298, 2703.25, 153.647, 138.822, 152.059 )
 
-[node name="room2" type="Node2D"]
+[node name="room 2" type="Node2D"]
 
 [node name="Sprite" type="Sprite" parent="."]
 position = Vector2( 1432.38, 539.391 )

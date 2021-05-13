@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/Down Hearted Blues 1923.wav-46a8b98a8544d9d12176099e50304368.sample"
+
+[deps]
+
+source_file="res://sounds/Down Hearted Blues 1923.wav"
+dest_files=[ "res://.import/Down Hearted Blues 1923.wav-46a8b98a8544d9d12176099e50304368.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0
