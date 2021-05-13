@@ -17,7 +17,7 @@ func _ready():
 
 func _physics_process(_delta):
 	if ALIVE == false:
-		queue_free()
+		get_tree().change_scene("res://scenes/levels/game over.tscn")
 	if Picked>0 :
 		$SoundReload.play()
 		gun.bullets = gun.bullets + Picked

@@ -21,12 +21,9 @@ func _process(_delta):
 		$gun.flip_v = true
 		$BulletPoint.position = Vector2(180,35)
 	while(bullets > 0) and can_fire:
-		print("attack")
 		bullets = bullets - 1
-		print(can_fire)
 		if can_fire == true:
 			$SoundShot.play()
-			print(bullets)
 			var bullet_instance = bullet.instance()
 			bullet_instance.position = $BulletPoint.get_global_position()
 			bullet_instance.rotation_degrees = rotation_degrees
@@ -35,7 +32,6 @@ func _process(_delta):
 			can_fire = false
 			yield(get_tree().create_timer(fire_rate),"timeout")
 			can_fire = true
-	$SoundEmpty.play()
 
 func attack():
 	_process(true)
