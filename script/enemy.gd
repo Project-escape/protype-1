@@ -13,7 +13,6 @@ func _ready():
 	if not detects_cliffs:
 		set_modulate(Color(1.2,0.5,1))
 
-
 func _physics_process(delta):
 	if is_on_wall() or not $floorchecker.is_colliding() and detects_cliffs and is_on_floor():
 		direction = direction * -1
@@ -42,7 +41,6 @@ func _on_top_checker_body_entered(body):
 func _on_sides_checker_body_entered(body):
 	print("Ouch !")
 	body.ouch(position.x)
-
 
 func _on_Timer_timeout():
 	queue_free()

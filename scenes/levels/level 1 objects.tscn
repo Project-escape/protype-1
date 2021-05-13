@@ -1,8 +1,43 @@
-[gd_scene load_steps=2 format=2]
+[gd_scene load_steps=4 format=2]
 
-[ext_resource path="res://scenes/levels/level 1 lights.tscn" type="PackedScene" id=1]
+[ext_resource path="res://scenes/levels/level 1 chests.tscn" type="PackedScene" id=1]
+[ext_resource path="res://scenes/objects/oil_barrel.tscn" type="PackedScene" id=2]
+[ext_resource path="res://scenes/objects/football.tscn" type="PackedScene" id=3]
 
 [node name="level 1 objects" type="Node2D"]
 
-[node name="level 1 lights" parent="." instance=ExtResource( 1 )]
-position = Vector2( 64.731, -560.545 )
+[node name="level 1 chests" parent="." instance=ExtResource( 1 )]
+position = Vector2( -244.967, -82.9182 )
+
+[node name="football" parent="." instance=ExtResource( 3 )]
+position = Vector2( 2518.66, 2520.47 )
+
+[node name="football2" parent="." instance=ExtResource( 3 )]
+position = Vector2( 5604.45, 2036.3 )
+
+[node name="football3" parent="." instance=ExtResource( 3 )]
+position = Vector2( 1502.15, 4344.48 )
+
+[node name="football4" parent="." instance=ExtResource( 3 )]
+position = Vector2( 4525.96, 6390.59 )
+
+[node name="football5" parent="." instance=ExtResource( 3 )]
+position = Vector2( 7217.15, 6158.77 )
+
+[node name="football6" parent="." instance=ExtResource( 3 )]
+position = Vector2( 5185.73, 7908.87 )
+
+[node name="oil_barrel" parent="." instance=ExtResource( 2 )]
+position = Vector2( 5989.28, 8275.43 )
+
+[node name="oil_barrel2" parent="." instance=ExtResource( 2 )]
+position = Vector2( 11063.8, 6351.43 )
+
+[node name="oil_barrel3" parent="." instance=ExtResource( 2 )]
+position = Vector2( 11637.7, 3270.62 )
+
+[node name="oil_barrel4" parent="." instance=ExtResource( 2 )]
+position = Vector2( 16258.9, 3089.4 )
+
+[node name="oil_barrel5" parent="." instance=ExtResource( 2 )]
+position = Vector2( 12800.6, 7891.83 )

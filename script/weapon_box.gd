@@ -14,7 +14,7 @@ func _process(_delta):
 			$SoundOpen.play()
 			yield(get_tree().create_timer(5),"timeout")
 			$AnimatedSprite.play()
-			player.sample = player.sample + 1
+			player.Picked = player.Picked + 1
 			closed = false
 
 func _on_Area2D_body_entered(body):

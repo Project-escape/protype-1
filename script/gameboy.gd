@@ -1,22 +1,24 @@
 extends KinematicBody2D
 
-#get_node("gun")
 onready var gun =  get_node("gun")
 var velocity = Vector2(0,0)
 var cover = false
 var ladder_on = false
 
-var sample = 0
+var Picked = 0
 var SPEED = 350
 var GRAVITY = 35
 var INERTIA = 350
 const JUMPFORCE = -1100
 
+func _ready():
+	$"/root/Global".register_player(self)
+
 func _physics_process(_delta):
-	if sample>0 :
+	if Picked>0 :
 		$SoundReload.play()
-		gun.bullets = gun.bullets + sample
-		sample = 0
+		gun.bullets = gun.bullets + Picked
+		Picked = 0
 	if Input.is_action_pressed("sprint"):
 		SPEED = 900
 	else:
@@ -88,7 +90,7 @@ func fall_left_reset():
 	
 func fall_right_reset():
 	var player_instance = get_node(".")
-	player_instance.position.x = 17200
+	player_instance.position.x = 18500
 	get_parent().call_deferred("add_child", player_instance)
 	
 func fall_y_reset():
@@ -100,7 +102,6 @@ func _on_right_resetter_body_entered(_body):
 
 func _on_down_resetter_body_shape_entered(_body_id, _body, _body_shape, _area_shape):
 	$SoundAaaahhh.play()
-	print(sample)
 	fall_y_reset()
 
 func _on_left_resetter_body_entered(_body):

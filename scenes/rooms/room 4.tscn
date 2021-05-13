@@ -1,7 +1,7 @@
 [gd_scene load_steps=11 format=2]
 
 [ext_resource path="res://assests/Environment/wall 4.png" type="Texture" id=1]
-[ext_resource path="res://scenes/door.tscn" type="PackedScene" id=2]
+[ext_resource path="res://scenes/objects/door.tscn" type="PackedScene" id=2]
 [ext_resource path="res://assests/Environment/background wall 2.png" type="Texture" id=3]
 
 [sub_resource type="RectangleShape2D" id=1]

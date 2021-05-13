@@ -1,7 +1,7 @@
 [gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://assests/Objects/toxic can.png" type="Texture" id=1]
-[ext_resource path="res://scenes/oil_barrel.gd" type="Script" id=2]
+[ext_resource path="res://script/oil_barrel.gd" type="Script" id=2]
 
 [sub_resource type="OccluderPolygon2D" id=1]
 cull_mode = 1

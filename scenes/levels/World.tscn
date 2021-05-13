@@ -1,21 +1,45 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=6 format=2]
 
-[ext_resource path="res://scenes/levels/level 1 chests.tscn" type="PackedScene" id=1]
+[ext_resource path="res://scenes/levels/level 1 lights.tscn" type="PackedScene" id=1]
 [ext_resource path="res://sounds/Down Hearted Blues 1923.wav" type="AudioStream" id=2]
 [ext_resource path="res://assests/Environment/background.png" type="Texture" id=3]
+[ext_resource path="res://scenes/characters/bot1.tscn" type="PackedScene" id=4]
+[ext_resource path="res://scenes/objects/oil_barrel.tscn" type="PackedScene" id=5]
 
 [node name="World" type="Node2D"]
 modulate = Color( 0.0470588, 0.0470588, 0.0470588, 1 )
 
 [node name="background" type="Sprite" parent="."]
-position = Vector2( 13532.9, 7075.02 )
-scale = Vector2( 16.3924, 17.492 )
+visible = false
+position = Vector2( 14922.3, 7346.86 )
+scale = Vector2( 17.8397, 26.2735 )
 z_index = -2
 texture = ExtResource( 3 )
 
-[node name="level 1 chests" parent="." instance=ExtResource( 1 )]
-position = Vector2( 6102.55, 2536.06 )
+[node name="level 1 lights" parent="." instance=ExtResource( 1 )]
+position = Vector2( 1493.81, 810.206 )
 
 [node name="bg2" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 2 )
 autoplay = true
+
+[node name="oil_barrel" parent="." instance=ExtResource( 5 )]
+position = Vector2( 7700.2, 6994.24 )
+
+[node name="bot1" parent="." instance=ExtResource( 4 )]
+position = Vector2( 15039.9, 11662.5 )
+
+[node name="bot2" parent="." instance=ExtResource( 4 )]
+position = Vector2( 8664.6, 3094.5 )
+
+[node name="bot3" parent="." instance=ExtResource( 4 )]
+position = Vector2( 2913.64, 9283.05 )
+
+[node name="bot4" parent="." instance=ExtResource( 4 )]
+position = Vector2( 3236.54, 6054.01 )
+
+[node name="bot5" parent="." instance=ExtResource( 4 )]
+position = Vector2( 7030.67, 9875.04 )
+
+[node name="bot6" parent="." instance=ExtResource( 4 )]
+position = Vector2( 18493.8, 2502.06 )
