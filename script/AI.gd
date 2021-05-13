@@ -37,7 +37,6 @@ func set_state(new_state: int):
 	current_state = new_state
 	emit_signal("state_changed", current_state)
 
-
 func _on_player_detection_zone_body_entered(body):
 	if body.name == "gameboy":
 		set_state(State.ATTACK)

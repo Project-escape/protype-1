@@ -9,6 +9,9 @@ var bullets = 3
 var can_fire = true
 var ATTACK = false 
 
+func _ready():
+	set_process(false)
+
 func _process(_delta):
 	look_at($"/root/Global".player.get_global_position())
 	if Input.is_action_pressed("right"):
@@ -17,9 +20,7 @@ func _process(_delta):
 	elif Input.is_action_pressed("left"):
 		$gun.flip_v = true
 		$BulletPoint.position = Vector2(180,35)
-
-func attack():
-	while(bullets > 0):
+	while(bullets > 0) and can_fire:
 		print("attack")
 		bullets = bullets - 1
 		print(can_fire)
@@ -35,4 +36,6 @@ func attack():
 			yield(get_tree().create_timer(fire_rate),"timeout")
 			can_fire = true
 	$SoundEmpty.play()
-	return
+
+func attack():
+	_process(true)

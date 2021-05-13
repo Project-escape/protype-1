@@ -4,6 +4,7 @@ onready var gun =  get_node("gun")
 var velocity = Vector2(0,0)
 var cover = false
 var ladder_on = false
+var ALIVE = true
 
 var Picked = 0
 var SPEED = 350
@@ -15,6 +16,8 @@ func _ready():
 	$"/root/Global".register_player(self)
 
 func _physics_process(_delta):
+	if ALIVE == false:
+		queue_free()
 	if Picked>0 :
 		$SoundReload.play()
 		gun.bullets = gun.bullets + Picked
