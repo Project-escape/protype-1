@@ -10,7 +10,6 @@
 modulate = Color( 0.0470588, 0.0470588, 0.0470588, 1 )
 
 [node name="background" type="Sprite" parent="."]
-visible = false
 position = Vector2( 14922.3, 7346.86 )
 scale = Vector2( 17.8397, 26.2735 )
 z_index = -2
