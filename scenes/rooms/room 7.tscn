@@ -1,7 +1,7 @@
 [gd_scene load_steps=9 format=2]
 
 [ext_resource path="res://assests/Environment/wall 6.png" type="Texture" id=1]
-[ext_resource path="res://scenes/objects/door.tscn" type="PackedScene" id=2]
+[ext_resource path="res://scenes/machines/door1.tscn" type="PackedScene" id=2]
 [ext_resource path="res://assests/Environment/background wall 6.png" type="Texture" id=3]
 
 [sub_resource type="RectangleShape2D" id=1]
@@ -26,14 +26,6 @@ polygon = PoolVector2Array( 348.363, -1066.57, 1731.76, -1061.53, 1731.76, 1644.
 position = Vector2( 1047.83, 261.089 )
 z_index = -1
 texture = ExtResource( 3 )
-
-[node name="door2" parent="." instance=ExtResource( 2 )]
-position = Vector2( 625.268, 1592.19 )
-rotation = 1.5708
-
-[node name="door" parent="." instance=ExtResource( 2 )]
-position = Vector2( 422.689, -803.29 )
-rotation = 3.14159
 
 [node name="wall 6" type="Sprite" parent="."]
 position = Vector2( 1044.26, 289.598 )
@@ -60,3 +52,11 @@ shape = SubResource( 4 )
 
 [node name="LightOccluder2D" type="LightOccluder2D" parent="."]
 occluder = SubResource( 5 )
+
+[node name="door1" parent="." instance=ExtResource( 2 )]
+position = Vector2( 627.467, 1644.1 )
+rotation = 1.5708
+
+[node name="door2" parent="." instance=ExtResource( 2 )]
+position = Vector2( 348.76, -806.891 )
+rotation = 3.14159

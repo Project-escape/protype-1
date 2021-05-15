@@ -10,7 +10,7 @@
 modulate = Color( 0.0470588, 0.0470588, 0.0470588, 1 )
 
 [node name="background" type="Sprite" parent="."]
-position = Vector2( 14922.3, 7346.86 )
+position = Vector2( 10722.7, 11738.6 )
 scale = Vector2( 17.8397, 26.2735 )
 z_index = -2
 texture = ExtResource( 3 )
@@ -20,6 +20,7 @@ position = Vector2( 1493.81, 810.206 )
 
 [node name="bg2" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 2 )
+volume_db = -5.0
 autoplay = true
 
 [node name="oil_barrel" parent="." instance=ExtResource( 5 )]

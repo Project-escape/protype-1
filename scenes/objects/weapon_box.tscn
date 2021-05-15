@@ -28,7 +28,9 @@ extents = Vector2( 140.597, 71.2711 )
 [sub_resource type="RectangleShape2D" id=5]
 extents = Vector2( 227.706, 71.8657 )
 
-[node name="weapon_box" type="Node2D"]
+[node name="weapon_box" type="Node2D" groups=[
+"machines",
+]]
 script = ExtResource( 2 )
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="."]

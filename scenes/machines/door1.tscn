@@ -1,0 +1,45 @@
+[gd_scene load_steps=7 format=2]
+
+[ext_resource path="res://assests/Objects/door close.png" type="Texture" id=1]
+[ext_resource path="res://sounds/close_door_1.wav" type="AudioStream" id=2]
+[ext_resource path="res://assests/Objects/door open.png" type="Texture" id=3]
+[ext_resource path="res://script/door.gd" type="Script" id=4]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 24.3445, 195.754 )
+
+[sub_resource type="SpriteFrames" id=2]
+animations = [ {
+"frames": [ ExtResource( 1 ), ExtResource( 3 ) ],
+"loop": false,
+"name": "open_door",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 3 ), ExtResource( 1 ) ],
+"loop": false,
+"name": "close_door",
+"speed": 5.0
+} ]
+
+[node name="door1" type="Area2D" groups=[
+"machines",
+]]
+script = ExtResource( 4 )
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="."]
+position = Vector2( -1.12247, 3.05176e-05 )
+shape = SubResource( 1 )
+
+[node name="Door" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource( 2 )
+
+[node name="AnimatedSprite" type="AnimatedSprite" parent="."]
+position = Vector2( -63.9803, -1.52588e-05 )
+frames = SubResource( 2 )
+animation = "open_door"
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2( -1.12247, 3.05176e-05 )
+shape = SubResource( 1 )

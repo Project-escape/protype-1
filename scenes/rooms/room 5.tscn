@@ -1,7 +1,7 @@
 [gd_scene load_steps=10 format=2]
 
 [ext_resource path="res://assests/Environment/wall 7.png" type="Texture" id=1]
-[ext_resource path="res://scenes/objects/door.tscn" type="PackedScene" id=2]
+[ext_resource path="res://scenes/machines/door1.tscn" type="PackedScene" id=2]
 [ext_resource path="res://assests/Environment/background wall 7.png" type="Texture" id=3]
 
 [sub_resource type="RectangleShape2D" id=1]
@@ -17,7 +17,7 @@ extents = Vector2( 684.847, 26.0159 )
 extents = Vector2( 446.73, 25.6603 )
 
 [sub_resource type="RectangleShape2D" id=5]
-extents = Vector2( 34.3883, 193.552 )
+extents = Vector2( 34.3883, 182.373 )
 
 [sub_resource type="OccluderPolygon2D" id=6]
 cull_mode = 1
@@ -29,14 +29,6 @@ polygon = PoolVector2Array( 351.477, -1061.42, 1731.76, -1061.53, 1732.94, 1638.
 position = Vector2( 387.049, 297.027 )
 z_index = -1
 texture = ExtResource( 3 )
-
-[node name="door2" parent="." instance=ExtResource( 2 )]
-position = Vector2( 625.268, 1592.19 )
-rotation = 1.5708
-
-[node name="door" parent="." instance=ExtResource( 2 )]
-position = Vector2( -892.29, 470.206 )
-rotation = 3.14159
 
 [node name="wall 7" type="Sprite" parent="."]
 position = Vector2( 387.049, 286.318 )
@@ -74,9 +66,17 @@ position = Vector2( 1276.84, 1610.08 )
 shape = SubResource( 4 )
 
 [node name="CollisionShape2D7" type="CollisionShape2D" parent="StaticBody2D"]
-position = Vector2( -925.044, 86.878 )
+position = Vector2( -922.951, 77.4392 )
 shape = SubResource( 5 )
 
 [node name="LightOccluder2D" type="LightOccluder2D" parent="."]
 position = Vector2( 2, -2 )
 occluder = SubResource( 6 )
+
+[node name="door1" parent="." instance=ExtResource( 2 )]
+position = Vector2( -965.451, 464.018 )
+rotation = 3.14159
+
+[node name="door2" parent="." instance=ExtResource( 2 )]
+position = Vector2( 626.683, 1640.82 )
+rotation = 1.5708

@@ -1,27 +1,19 @@
 extends Node2D
 
-onready var area: Area2D = $AreaDetector
+#onready var area: Area2D = $AreaDetector
 var closed = true
+var ACCESS = false
 
-func _ready() -> void:
-	set_process(false)
-
-func _process(_delta) -> void:
-		if Input.is_action_just_pressed("action"):
-			$Door.play()
-			if closed == true:
-				$StaticBody2D/CollisionShape2D.set_disabled(true)
-				$AnimatedSprite.play("open_door")
-				closed = false
-			elif closed == false:
-				$StaticBody2D/CollisionShape2D.set_disabled(false)
-				$AnimatedSprite.play("close_door")
-				closed = true
-
-func _on_AreaDetector_body_entered(body):
-	if body.name == "gameboy":
-		set_process(true)
-
-func _on_AreaDetector_body_exited(body):
-	if body.name == "gameboy":
-		set_process(false)
+func _process(_delta):
+	if ACCESS == true:
+		$Door.play()
+		if closed == true:
+			$StaticBody2D/CollisionShape2D.set_disabled(true)
+			$AnimatedSprite.play("open_door")
+			closed = false
+			ACCESS = false
+		elif closed == false:
+			$StaticBody2D/CollisionShape2D.set_disabled(false)
+			$AnimatedSprite.play("close_door")
+			closed = true
+			ACCESS = false
