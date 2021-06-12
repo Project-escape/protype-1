@@ -17,6 +17,7 @@ scale = Vector2( 0.3, 0.3 )
 [node name="RigidBody2D" type="RigidBody2D" parent="." groups=[
 "bodies",
 ]]
+gravity_scale = 10.0
 contacts_reported = 1
 
 [node name="football" type="Sprite" parent="RigidBody2D" groups=[

@@ -7,6 +7,8 @@ var INERTIA = 350
 const JUMPFORCE = -1100
 var cover = false
 var ALIVE = true
+var HIDE = false
+var Picked = 0
 
 func _physics_process(_delta):
 	if !ALIVE:
@@ -16,14 +18,12 @@ func _physics_process(_delta):
 	else:
 		SPEED = 350
 	if $left_ray.is_colliding():
-	#if Input.is_action_pressed("right"):
 		velocity.x = SPEED
 		$Sprite.play("walk")
 		$Sprite.flip_h = false
 		$vest.flip_h = false
 		$"head phone military".flip_h = false
 	elif $right_ray.is_colliding():
-	#elif Input.is_action_pressed("left"):
 		velocity.x = -SPEED
 		$Sprite.play("walk")
 		$Sprite.flip_h = true
@@ -64,6 +64,7 @@ func _integrate_forces(state):
 		velocity += -vector_to_player * SPEED * delta
 
 func hide():
+	if HIDE == true:
 		if cover == false:
 			#$SoundCardboard.play()
 			cover = true
@@ -72,8 +73,33 @@ func hide():
 			#$SoundCardboardOpen.play()
 			cover = false
 			$"cardboard box".hide()
+		HIDE = false
 
 func jump():
 	if is_on_floor() :
 		velocity.y = JUMPFORCE
 		$SoundJump.play()
+
+func fall_left_reset():
+	var player_instance = get_node(".")
+	player_instance.position.x = 0
+	#get_parent().call_deferred("add_child", player_instance)
+	
+func fall_right_reset():
+	var player_instance = get_node(".")
+	player_instance.position.x = 18970
+	#get_parent().call_deferred("add_child", player_instance)
+	
+func fall_y_reset():
+	var player_instance = get_node(".")
+	player_instance.position.y = 0
+
+func _on_right_resetter_body_entered(_body):
+	fall_left_reset()
+
+func _on_left_resetter_body_entered(_body):
+	fall_right_reset()
+
+func _on_down_resetter_body_entered(_body):
+	$SoundAaaahhh.play()
+	fall_y_reset()

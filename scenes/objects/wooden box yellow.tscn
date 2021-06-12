@@ -16,6 +16,7 @@ polygon = PoolVector2Array( -151.584, -146.545, 150.167, -147.175, 151.427, 146.
 [node name="RigidBody2D" type="RigidBody2D" parent="." groups=[
 "bodies",
 ]]
+mass = 5.0
 gravity_scale = 10.0
 
 [node name="wooden box yellow" type="Sprite" parent="RigidBody2D" groups=[

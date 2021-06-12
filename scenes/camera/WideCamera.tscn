@@ -1,0 +1,7 @@
+[gd_scene format=2]
+
+[node name="Camera" type="Camera2D"]
+position = Vector2( 8991.04, 8127.49 )
+rotating = true
+current = true
+zoom = Vector2( 11, 11 )

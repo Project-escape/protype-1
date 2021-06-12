@@ -4,8 +4,8 @@ extends Node2D
 var bullet = preload("res://scenes/objects/bullet.tscn")
 
 export var bullet_speed = 1000
-export var fire_rate = 0.4
-var bullets = 3
+export var fire_rate = 1
+var bullets = 5
 var can_fire = true
 var ATTACK = false 
 
@@ -22,6 +22,7 @@ func _process(_delta):
 		$BulletPoint.position = Vector2(180,35)
 	while(bullets > 0) and can_fire:
 		bullets = bullets - 1
+		print(bullets)
 		if can_fire == true:
 			$SoundShot.play()
 			var bullet_instance = bullet.instance()
@@ -35,3 +36,4 @@ func _process(_delta):
 
 func attack():
 	_process(true)
+

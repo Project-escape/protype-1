@@ -51,6 +51,7 @@ frames = SubResource( 2 )
 [node name="Area2D2" type="Area2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D2"]
+visible = false
 shape = SubResource( 3 )
 
 [node name="hit box" type="Area2D" parent="."]

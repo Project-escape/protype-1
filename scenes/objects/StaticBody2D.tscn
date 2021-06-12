@@ -6,14 +6,14 @@
 
 [sub_resource type="SpriteFrames" id=1]
 animations = [ {
-"frames": [ ExtResource( 1 ), ExtResource( 3 ) ],
-"loop": false,
-"name": "open_door",
-"speed": 5.0
-}, {
 "frames": [ ExtResource( 3 ), ExtResource( 1 ) ],
 "loop": false,
 "name": "close_door",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 1 ), ExtResource( 3 ) ],
+"loop": false,
+"name": "open_door",
 "speed": 5.0
 } ]
 
@@ -24,6 +24,7 @@ extents = Vector2( 24.3445, 195.754 )
 
 [node name="Door" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource( 2 )
+volume_db = 0.5
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="."]
 position = Vector2( -63.9803, -1.52588e-05 )

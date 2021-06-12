@@ -1,6 +1,8 @@
 [gd_scene load_steps=3 format=2]
 
-[ext_resource path="res://assests/Objects/toxic can broken.png" type="Texture" id=1]
+[sub_resource type="StreamTexture" id=2]
+flags = 4
+load_path = "res://.import/toxic can broken.png-8d8e9c1743e98459747192a4fc3fae5a.stex"
 
 [sub_resource type="OccluderPolygon2D" id=1]
 polygon = PoolVector2Array( -109.5, -2, -40.5, -30.5, -24.5, -30.5, 28.5, -7.5, 44.5, 19.5, 51, 49.5, 60.5, 47.5, 71, 48, 85, 14.5, 108, 22.5, 109, 167, -108.5, 167 )
@@ -11,7 +13,7 @@ polygon = PoolVector2Array( -109.5, -2, -40.5, -30.5, -24.5, -30.5, 28.5, -7.5, 
 
 [node name="toxic can broken" type="Sprite" parent="RigidBody2D2"]
 position = Vector2( 0.174965, 69.0892 )
-texture = ExtResource( 1 )
+texture = SubResource( 2 )
 
 [node name="LightOccluder2D" type="LightOccluder2D" parent="RigidBody2D2"]
 occluder = SubResource( 1 )

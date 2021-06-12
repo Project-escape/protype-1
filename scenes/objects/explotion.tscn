@@ -40,7 +40,7 @@ animations = [ {
 position = Vector2( 1.22821, 0.345215 )
 frames = SubResource( 6 )
 animation = "fire"
-frame = 1
+frame = 3
 playing = true
 script = ExtResource( 2 )
 

@@ -22,7 +22,7 @@ func _ready():
 func _physics_process(_delta):
 	if ALIVE == false:
 		var _new_scene = get_tree().change_scene("res://scenes/levels/game over.tscn")
-	
+		return
 	if Picked>0 :
 		$SoundReload.play()
 		gun.bullets = gun.bullets + Picked
@@ -35,6 +35,7 @@ func _physics_process(_delta):
 	
 	if Input.is_action_just_pressed("action"):
 		if ACCESS == true:
+			machine.Player = self
 			if machine.ACCESS == false:
 				machine.ACCESS = true
 				
@@ -52,7 +53,8 @@ func _physics_process(_delta):
 		else:
 			$Sprite.play("idle")
 		if not is_on_floor():
-			$Sprite.play("air")
+			#$Sprite.play("air")
+			pass
 		velocity.y = lerp(velocity.y,0,0.2)
 		velocity = move_and_slide(velocity, Vector2.UP, false, 4, 0.785398, false)
 	
@@ -106,15 +108,18 @@ func _body_exited_ladder():
 	GRAVITY = 35
 	ladder_on = false
 
+func _body_entered_fan():
+		velocity.y = JUMPFORCE * 2
+
 func fall_left_reset():
 	var player_instance = get_node(".")
 	player_instance.position.x = 0
-	get_parent().call_deferred("add_child", player_instance)
+	#get_parent().call_deferred("add_child", player_instance)
 	
 func fall_right_reset():
 	var player_instance = get_node(".")
-	player_instance.position.x = 18500
-	get_parent().call_deferred("add_child", player_instance)
+	player_instance.position.x = 18900
+	#get_parent().call_deferred("add_child", player_instance)
 	
 func fall_y_reset():
 	var player_instance = get_node(".")
@@ -123,7 +128,7 @@ func fall_y_reset():
 func _on_right_resetter_body_entered(_body):
 	fall_left_reset()
 
-func _on_down_resetter_body_shape_entered(_body_id, _body, _body_shape, _area_shape):
+func _on_down_resetter_body_entered(_body):
 	$SoundAaaahhh.play()
 	fall_y_reset()
 
@@ -132,9 +137,9 @@ func _on_left_resetter_body_entered(_body):
 
 func _on_Access_range_area_entered(area):
 	if area.is_in_group("machines"):
-		print("machine found")
 		ACCESS = true
 		machine = area
 
 func _on_Access_range_area_exited(_area):
 	ACCESS = false
+

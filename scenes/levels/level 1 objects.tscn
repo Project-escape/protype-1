@@ -1,50 +1,105 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=11 format=2]
 
-[ext_resource path="res://scenes/levels/level 1 chests.tscn" type="PackedScene" id=1]
-[ext_resource path="res://scenes/objects/oil_barrel.tscn" type="PackedScene" id=2]
-[ext_resource path="res://scenes/objects/football.tscn" type="PackedScene" id=3]
-[ext_resource path="res://scenes/objects/ladder.tscn" type="PackedScene" id=4]
+[ext_resource path="res://scenes/objects/cupboard.tscn" type="PackedScene" id=1]
+[ext_resource path="res://scenes/objects/television.tscn" type="PackedScene" id=2]
+[ext_resource path="res://scenes/objects/platform.tscn" type="PackedScene" id=3]
+[ext_resource path="res://scenes/objects/oil_barrel.tscn" type="PackedScene" id=4]
+[ext_resource path="res://scenes/objects/wooden box white.tscn" type="PackedScene" id=5]
+[ext_resource path="res://scenes/objects/football.tscn" type="PackedScene" id=6]
+[ext_resource path="res://scenes/objects/wooden box yellow.tscn" type="PackedScene" id=7]
+[ext_resource path="res://scenes/levels/level 1 base.tscn" type="PackedScene" id=8]
+[ext_resource path="res://scenes/objects/ladder.tscn" type="PackedScene" id=9]
+[ext_resource path="res://scenes/machines/fan.tscn" type="PackedScene" id=10]
 
 [node name="level 1 objects" type="Node2D"]
+position = Vector2( 0, -2 )
 
-[node name="level 1 chests" parent="." instance=ExtResource( 1 )]
-position = Vector2( -244.967, -82.9182 )
+[node name="level 1 base" parent="." instance=ExtResource( 8 )]
+position = Vector2( 77.6938, -719.473 )
 
-[node name="football" parent="." instance=ExtResource( 3 )]
+[node name="fan" parent="." instance=ExtResource( 10 )]
+position = Vector2( 8181.1, 9507.38 )
+
+[node name="fan2" parent="fan" instance=ExtResource( 10 )]
+position = Vector2( 387.758, -787.806 )
+
+[node name="fan3" parent="fan" instance=ExtResource( 10 )]
+position = Vector2( -17.0303, -1516.09 )
+
+[node name="wooden box white3" parent="." instance=ExtResource( 5 )]
+position = Vector2( 9271.52, 1708.32 )
+
+[node name="wooden box white4" parent="." instance=ExtResource( 5 )]
+position = Vector2( 8964.41, 1713.84 )
+
+[node name="football" parent="." instance=ExtResource( 6 )]
 position = Vector2( 2518.66, 2520.47 )
 
-[node name="football2" parent="." instance=ExtResource( 3 )]
+[node name="football2" parent="." instance=ExtResource( 6 )]
 position = Vector2( 5604.45, 2036.3 )
 
-[node name="football3" parent="." instance=ExtResource( 3 )]
+[node name="football3" parent="." instance=ExtResource( 6 )]
 position = Vector2( 1502.15, 4344.48 )
 
-[node name="football4" parent="." instance=ExtResource( 3 )]
+[node name="football4" parent="." instance=ExtResource( 6 )]
 position = Vector2( 4525.96, 6390.59 )
 
-[node name="football5" parent="." instance=ExtResource( 3 )]
+[node name="football5" parent="." instance=ExtResource( 6 )]
 position = Vector2( 7217.15, 6158.77 )
 
-[node name="football6" parent="." instance=ExtResource( 3 )]
+[node name="football6" parent="." instance=ExtResource( 6 )]
 position = Vector2( 5185.73, 7908.87 )
 
-[node name="oil_barrel" parent="." instance=ExtResource( 2 )]
-position = Vector2( 5989.28, 8275.43 )
+[node name="oil_barrel" parent="." instance=ExtResource( 4 )]
+position = Vector2( 5604.18, 7837.47 )
 
-[node name="oil_barrel2" parent="." instance=ExtResource( 2 )]
+[node name="oil_barrel2" parent="." instance=ExtResource( 4 )]
 position = Vector2( 11063.8, 6351.43 )
 
-[node name="oil_barrel3" parent="." instance=ExtResource( 2 )]
+[node name="oil_barrel3" parent="." instance=ExtResource( 4 )]
 position = Vector2( 11637.7, 3270.62 )
 
-[node name="oil_barrel4" parent="." instance=ExtResource( 2 )]
+[node name="oil_barrel4" parent="." instance=ExtResource( 4 )]
 position = Vector2( 16258.9, 3089.4 )
 
-[node name="oil_barrel5" parent="." instance=ExtResource( 2 )]
+[node name="oil_barrel5" parent="." instance=ExtResource( 4 )]
 position = Vector2( 12800.6, 7891.83 )
 
-[node name="ladder" parent="." instance=ExtResource( 4 )]
-position = Vector2( 7029.48, 11670 )
+[node name="wooden box white2" parent="." instance=ExtResource( 5 )]
+position = Vector2( 9446.79, 6615.28 )
 
-[node name="ladder2" parent="ladder" instance=ExtResource( 4 )]
-position = Vector2( -201.33, -451.661 )
+[node name="wooden box yellow2" parent="." instance=ExtResource( 7 )]
+position = Vector2( 9270.41, 1439.56 )
+
+[node name="platform" parent="." instance=ExtResource( 3 )]
+position = Vector2( 8689.98, 11153.4 )
+
+[node name="platform2" parent="." instance=ExtResource( 3 )]
+position = Vector2( 9555.93, 11527.6 )
+
+[node name="platform3" parent="." instance=ExtResource( 3 )]
+position = Vector2( 10446.8, 11171.2 )
+
+[node name="ladder3" parent="." instance=ExtResource( 9 )]
+position = Vector2( 9048.14, 5998.3 )
+
+[node name="ladder4" parent="." instance=ExtResource( 9 )]
+position = Vector2( 3493.19, 10585.5 )
+
+[node name="cupboard" parent="." instance=ExtResource( 1 )]
+position = Vector2( 3568.18, 9633.03 )
+
+[node name="cupboard2" parent="cupboard" instance=ExtResource( 1 )]
+position = Vector2( -14.9834, -179.798 )
+
+[node name="cupboard3" parent="cupboard" instance=ExtResource( 1 )]
+position = Vector2( -14.9834, -365.588 )
+
+[node name="television" parent="." instance=ExtResource( 2 )]
+position = Vector2( 3682.05, 9018.72 )
+
+[node name="wooden box white" parent="." instance=ExtResource( 5 )]
+position = Vector2( 3079.73, 9627.04 )
+
+[node name="fan2" parent="." instance=ExtResource( 10 )]
+position = Vector2( 13256.6, 8696.86 )

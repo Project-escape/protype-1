@@ -3,6 +3,7 @@ extends Node2D
 #onready var area: Area2D = $AreaDetector
 var closed = true
 var ACCESS = false
+var Player
 
 func _process(_delta):
 	if ACCESS == true:

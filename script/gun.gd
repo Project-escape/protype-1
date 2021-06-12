@@ -1,4 +1,4 @@
-extends Node2D
+extends RigidBody2D
 
 export var bullet_speed = 1000
 export var fire_rate = 0.4
@@ -15,6 +15,7 @@ func _process(_delta):
 		$gun.flip_v = true
 		$BulletPoint.position = Vector2(180,35)
 	if Input.is_action_pressed("fire") and can_fire and bullets > 0 :
+		#$ShakingCamera.shake = true
 		$SoundShot.play()
 		bullets = bullets - 1
 		var bullet_instance = bullet.instance()
