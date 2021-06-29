@@ -1,0 +1,71 @@
+[gd_scene load_steps=11 format=2]
+
+[ext_resource path="res://assests/Effects/Layer 0.png" type="Texture" id=1]
+[ext_resource path="res://assests/Objects/lamp 1.png" type="Texture" id=2]
+[ext_resource path="res://script/lamp_1.gd" type="Script" id=3]
+[ext_resource path="res://assests/Objects/lamp 1 broken.png" type="Texture" id=4]
+[ext_resource path="res://sounds/light.wav" type="AudioStream" id=5]
+[ext_resource path="res://sounds/Light Bulb Breaking.wav" type="AudioStream" id=6]
+
+[sub_resource type="CircleShape2D" id=1]
+radius = 432.163
+
+[sub_resource type="SpriteFrames" id=2]
+animations = [ {
+"frames": [ ExtResource( 2 ), ExtResource( 4 ) ],
+"loop": false,
+"name": "default",
+"speed": 10.0
+} ]
+
+[sub_resource type="CircleShape2D" id=3]
+radius = 1703.17
+
+[sub_resource type="CapsuleShape2D" id=4]
+radius = 41.5322
+height = 96.7528
+
+[node name="lamp_1" type="Node2D"]
+script = ExtResource( 3 )
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="StaticBody2D"]
+polygon = PoolVector2Array( -42.8235, 72.6065, -16.0361, 74.3923, 13.1324, 72.2097, 19.6805, 48.9939, 12.1403, 47.4065, 12.1403, 33.5167, 10.5529, 31.7309, 15.9104, 16.849, 16.3072, -7.55726, 5.7907, -37.5195, -3.33686, -68.0969, -5.51953, -97.4638, -34.2912, -98.8528, -36.2754, -71.4701, -45.403, -36.7457, -54.3321, -7.77566, -52.9431, 16.0354, -44.014, 33.0999, -44.6093, 35.6795, -43.8156, 47.585, -43.6172, 48.9739, -52.9431, 53.1409 )
+
+[node name="Light2D" type="Light2D" parent="."]
+visible = false
+texture = ExtResource( 1 )
+color = Color( 1, 0.929412, 0.47451, 1 )
+energy = 3.0
+shadow_enabled = true
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource( 1 )
+
+[node name="AnimatedSprite" type="AnimatedSprite" parent="."]
+frames = SubResource( 2 )
+
+[node name="Area2D2" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D2"]
+visible = false
+shape = SubResource( 3 )
+
+[node name="hit box" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="hit box"]
+position = Vector2( -17.9797, -23.9729 )
+shape = SubResource( 4 )
+
+[node name="on" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource( 5 )
+
+[node name="break" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource( 6 )
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_Area2D_body_entered"]
+[connection signal="body_exited" from="Area2D2" to="." method="_on_Area2D2_body_exited"]
+[connection signal="body_entered" from="hit box" to="." method="_on_hit_box_body_entered"]

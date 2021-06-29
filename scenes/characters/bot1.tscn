@@ -1,0 +1,244 @@
+[gd_scene load_steps=33 format=2]
+
+[ext_resource path="res://assests/Addons/cardboard box.png" type="Texture" id=1]
+[ext_resource path="res://sounds/jump1.ogg" type="AudioStream" id=2]
+[ext_resource path="res://assests/Player/idle.png" type="Texture" id=3]
+[ext_resource path="res://assests/Player/climb.png" type="Texture" id=4]
+[ext_resource path="res://sounds/GunReload.wav" type="AudioStream" id=5]
+[ext_resource path="res://sounds/Drop.wav" type="AudioStream" id=6]
+[ext_resource path="res://assests/Player/walk (2).png" type="Texture" id=7]
+[ext_resource path="res://assests/Addons/head phone military.png" type="Texture" id=8]
+[ext_resource path="res://sounds/CardboardOpen.wav" type="AudioStream" id=9]
+[ext_resource path="res://assests/Addons/vest.png" type="Texture" id=10]
+[ext_resource path="res://sounds/Cardboard.wav" type="AudioStream" id=11]
+[ext_resource path="res://assests/Player/air.png" type="Texture" id=12]
+[ext_resource path="res://assests/Weapon/gun.png" type="Texture" id=13]
+[ext_resource path="res://script/bot_gun.gd" type="Script" id=14]
+[ext_resource path="res://script/bot1.gd" type="Script" id=15]
+[ext_resource path="res://script/botAI1.gd" type="Script" id=16]
+[ext_resource path="res://sounds/GunShot.wav" type="AudioStream" id=17]
+[ext_resource path="res://sounds/GunEmpty.wav" type="AudioStream" id=18]
+[ext_resource path="res://assests/Effects/light.png" type="Texture" id=19]
+
+[sub_resource type="AtlasTexture" id=1]
+flags = 4
+atlas = ExtResource( 7 )
+region = Rect2( 0, 0, 222, 302 )
+
+[sub_resource type="AtlasTexture" id=2]
+flags = 4
+atlas = ExtResource( 7 )
+region = Rect2( 222, 0, 222, 302 )
+
+[sub_resource type="AtlasTexture" id=3]
+flags = 4
+atlas = ExtResource( 7 )
+region = Rect2( 444, 0, 222, 302 )
+
+[sub_resource type="AtlasTexture" id=4]
+flags = 4
+atlas = ExtResource( 4 )
+region = Rect2( 0, 0, 205, 316 )
+
+[sub_resource type="AtlasTexture" id=5]
+flags = 4
+atlas = ExtResource( 4 )
+region = Rect2( 205, 0, 205, 316 )
+
+[sub_resource type="SpriteFrames" id=6]
+animations = [ {
+"frames": [ ExtResource( 3 ) ],
+"loop": true,
+"name": "idle",
+"speed": 5.0
+}, {
+"frames": [ SubResource( 1 ), SubResource( 2 ), SubResource( 3 ) ],
+"loop": true,
+"name": "walk",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 3 ) ],
+"loop": true,
+"name": "jump",
+"speed": 5.0
+}, {
+"frames": [ SubResource( 4 ), SubResource( 5 ) ],
+"loop": true,
+"name": "climb",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 12 ), ExtResource( 3 ), ExtResource( 12 ) ],
+"loop": true,
+"name": "air",
+"speed": 5.0
+} ]
+
+[sub_resource type="CapsuleShape2D" id=7]
+radius = 86.933
+height = 97.2053
+
+[sub_resource type="RectangleShape2D" id=8]
+extents = Vector2( 82.8588, 10031.5 )
+
+[sub_resource type="RectangleShape2D" id=9]
+extents = Vector2( 8937.35, 80.3308 )
+
+[sub_resource type="RectangleShape2D" id=10]
+extents = Vector2( 92.0654, 8831.83 )
+
+[sub_resource type="CircleShape2D" id=11]
+radius = 851.391
+
+[sub_resource type="CircleShape2D" id=12]
+radius = 991.02
+
+[sub_resource type="CapsuleShape2D" id=13]
+radius = 166.402
+height = 100.111
+
+[node name="bot1" type="KinematicBody2D" groups=[
+"characters",
+]]
+position = Vector2( 21168.1, 8312.55 )
+script = ExtResource( 15 )
+
+[node name="Sprite" type="AnimatedSprite" parent="."]
+modulate = Color( 1, 1, 1, 0.8 )
+position = Vector2( -5.62134, 17.6515 )
+frames = SubResource( 6 )
+animation = "air"
+
+[node name="vest" type="Sprite" parent="."]
+position = Vector2( -6.80786, 71.3362 )
+texture = ExtResource( 10 )
+
+[node name="head phone military" type="Sprite" parent="."]
+position = Vector2( -3.89335, -37.8138 )
+texture = ExtResource( 8 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2( -3.76444, 15.7242 )
+shape = SubResource( 7 )
+
+[node name="Timer" type="Timer" parent="."]
+one_shot = true
+
+[node name="SoundJump" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 2 )
+volume_db = -5.0
+
+[node name="SoundHurt" type="AudioStreamPlayer" parent="."]
+volume_db = -5.0
+
+[node name="SoundCardboard" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource( 11 )
+
+[node name="SoundCardboardOpen" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 9 )
+
+[node name="SoundAaaahhh" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource( 6 )
+pitch_scale = 1.2
+
+[node name="SoundReload" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 5 )
+volume_db = -5.0
+
+[node name="gun" type="Node2D" parent="."]
+position = Vector2( 3.8147e-06, 42.7096 )
+script = ExtResource( 14 )
+
+[node name="Timer2" type="Timer" parent="gun"]
+
+[node name="gun" type="Sprite" parent="gun"]
+position = Vector2( 60.4991, 0 )
+texture = ExtResource( 13 )
+
+[node name="Light2D" type="Light2D" parent="gun"]
+visible = false
+position = Vector2( 153.999, 0 )
+z_index = 2
+texture = ExtResource( 19 )
+texture_scale = 2.0
+energy = 7.0
+shadow_enabled = true
+
+[node name="BulletPoint" type="Node2D" parent="gun"]
+position = Vector2( 180, -35 )
+z_as_relative = false
+
+[node name="SoundShot" type="AudioStreamPlayer" parent="gun"]
+stream = ExtResource( 17 )
+volume_db = -10.0
+
+[node name="SoundEmpty" type="AudioStreamPlayer" parent="gun"]
+stream = ExtResource( 18 )
+volume_db = -5.0
+
+[node name="cardboard box" type="Sprite" parent="."]
+visible = false
+light_mask = 4
+position = Vector2( 4.14063, 9.40469 )
+z_index = 2
+texture = ExtResource( 1 )
+
+[node name="right_resetter" type="Area2D" parent="."]
+position = Vector2( -2031.88, 253.984 )
+
+[node name="player_on_right" type="CollisionShape2D" parent="right_resetter"]
+position = Vector2( -16938, 178.905 )
+shape = SubResource( 8 )
+
+[node name="down_resetter" type="Area2D" parent="."]
+position = Vector2( 0, -1574.7 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="down_resetter"]
+position = Vector2( -869.379, -12082.5 )
+shape = SubResource( 9 )
+
+[node name="left_resetter" type="Area2D" parent="."]
+position = Vector2( 2031.88, 50.7969 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="left_resetter"]
+position = Vector2( 16960.6, -160.095 )
+shape = SubResource( 10 )
+
+[node name="fire zone" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="fire zone"]
+shape = SubResource( 11 )
+
+[node name="AI" type="Node2D" parent="."]
+script = ExtResource( 16 )
+
+[node name="player_detection_zone" type="Area2D" parent="AI"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="AI/player_detection_zone"]
+position = Vector2( 2.82837, 0 )
+shape = SubResource( 12 )
+
+[node name="left_ray" type="RayCast2D" parent="."]
+position = Vector2( -123.471, 30.3065 )
+rotation = 1.5708
+scale = Vector2( 1, 3 )
+enabled = true
+
+[node name="right_ray" type="RayCast2D" parent="."]
+position = Vector2( 108.5, 39.5 )
+rotation = 4.71239
+scale = Vector2( 1, 3 )
+enabled = true
+
+[node name="AccessRange" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="AccessRange"]
+position = Vector2( -2.83167, 13.2142 )
+rotation = 1.5708
+shape = SubResource( 13 )
+
+[connection signal="body_entered" from="right_resetter" to="." method="_on_right_resetter_body_entered"]
+[connection signal="body_entered" from="down_resetter" to="." method="_on_down_resetter_body_entered"]
+[connection signal="body_entered" from="left_resetter" to="." method="_on_left_resetter_body_entered"]
+[connection signal="body_entered" from="AI/player_detection_zone" to="AI" method="_on_player_detection_zone_body_entered"]
+[connection signal="body_exited" from="AI/player_detection_zone" to="AI" method="_on_player_detection_zone_body_exited"]
+[connection signal="area_entered" from="AccessRange" to="AI" method="_on_AccessRange_area_entered"]

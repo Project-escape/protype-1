@@ -1,0 +1,181 @@
+[gd_scene load_steps=27 format=2]
+
+[ext_resource path="res://assests/Player/idle.png" type="Texture" id=1]
+[ext_resource path="res://script/gameboy.gd" type="Script" id=2]
+[ext_resource path="res://sounds/jump1.ogg" type="AudioStream" id=3]
+[ext_resource path="res://sounds/GunReload.wav" type="AudioStream" id=4]
+[ext_resource path="res://assests/Player/walk (2).png" type="Texture" id=5]
+[ext_resource path="res://assests/Player/air.png" type="Texture" id=6]
+[ext_resource path="res://scenes/objects/gun.tscn" type="PackedScene" id=7]
+[ext_resource path="res://assests/Addons/vest.png" type="Texture" id=8]
+[ext_resource path="res://assests/Addons/head phone military.png" type="Texture" id=9]
+[ext_resource path="res://assests/Addons/cardboard box.png" type="Texture" id=10]
+[ext_resource path="res://sounds/Cardboard.wav" type="AudioStream" id=11]
+[ext_resource path="res://sounds/CardboardOpen.wav" type="AudioStream" id=12]
+[ext_resource path="res://sounds/Drop.wav" type="AudioStream" id=13]
+[ext_resource path="res://scenes/camera/ShakingCamera.tscn" type="PackedScene" id=14]
+[ext_resource path="res://assests/Player/climb.png" type="Texture" id=15]
+
+[sub_resource type="AtlasTexture" id=1]
+flags = 4
+atlas = ExtResource( 5 )
+region = Rect2( 0, 0, 222, 302 )
+
+[sub_resource type="AtlasTexture" id=2]
+flags = 4
+atlas = ExtResource( 5 )
+region = Rect2( 222, 0, 222, 302 )
+
+[sub_resource type="AtlasTexture" id=3]
+flags = 4
+atlas = ExtResource( 5 )
+region = Rect2( 444, 0, 222, 302 )
+
+[sub_resource type="AtlasTexture" id=4]
+flags = 4
+atlas = ExtResource( 15 )
+region = Rect2( 0, 0, 205, 316 )
+
+[sub_resource type="AtlasTexture" id=5]
+flags = 4
+atlas = ExtResource( 15 )
+region = Rect2( 205, 0, 205, 316 )
+
+[sub_resource type="SpriteFrames" id=6]
+animations = [ {
+"frames": [ ExtResource( 1 ) ],
+"loop": true,
+"name": "idle",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 1 ) ],
+"loop": true,
+"name": "jump",
+"speed": 5.0
+}, {
+"frames": [ SubResource( 1 ), SubResource( 2 ), SubResource( 3 ) ],
+"loop": true,
+"name": "walk",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 6 ), ExtResource( 1 ), ExtResource( 6 ) ],
+"loop": true,
+"name": "air",
+"speed": 5.0
+}, {
+"frames": [ SubResource( 4 ), SubResource( 5 ) ],
+"loop": true,
+"name": "climb",
+"speed": 5.0
+} ]
+
+[sub_resource type="CapsuleShape2D" id=7]
+radius = 88.4231
+height = 97.2053
+
+[sub_resource type="RectangleShape2D" id=8]
+extents = Vector2( 82.8588, 7910.82 )
+
+[sub_resource type="RectangleShape2D" id=9]
+extents = Vector2( 13116.4, 80.3308 )
+
+[sub_resource type="RectangleShape2D" id=10]
+extents = Vector2( 92.0654, 7781.04 )
+
+[sub_resource type="CapsuleShape2D" id=11]
+radius = 187.633
+height = 89.0229
+
+[node name="gameboy" type="KinematicBody2D" groups=[
+"characters",
+]]
+position = Vector2( 7.48309, -17.4311 )
+script = ExtResource( 2 )
+
+[node name="Sprite" type="AnimatedSprite" parent="."]
+modulate = Color( 1, 1, 1, 0.8 )
+position = Vector2( -5.62134, 17.6515 )
+frames = SubResource( 6 )
+animation = "air"
+
+[node name="vest" type="Sprite" parent="."]
+position = Vector2( -6.80786, 71.3362 )
+texture = ExtResource( 8 )
+
+[node name="head phone military" type="Sprite" parent="."]
+position = Vector2( -3.89335, -37.8138 )
+texture = ExtResource( 9 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2( -3.76444, 15.7242 )
+shape = SubResource( 7 )
+
+[node name="Timer" type="Timer" parent="."]
+one_shot = true
+
+[node name="SoundJump" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 3 )
+volume_db = -15.0
+pitch_scale = 1.25
+
+[node name="SoundHurt" type="AudioStreamPlayer" parent="."]
+
+[node name="SoundCardboard" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource( 11 )
+
+[node name="SoundCardboardOpen" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 12 )
+
+[node name="SoundReload" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource( 4 )
+max_distance = 1000.0
+
+[node name="SoundAaaahhh" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource( 13 )
+pitch_scale = 1.2
+
+[node name="cardboard box" type="Sprite" parent="."]
+visible = false
+position = Vector2( 4.14063, 9.40469 )
+texture = ExtResource( 10 )
+
+[node name="right_resetter" type="Area2D" parent="."]
+visible = false
+
+[node name="player_on_right" type="CollisionShape2D" parent="right_resetter"]
+position = Vector2( -18450.7, 365.306 )
+shape = SubResource( 8 )
+
+[node name="down_resetter" type="Area2D" parent="."]
+visible = false
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="down_resetter"]
+position = Vector2( 1065.86, -14501.5 )
+shape = SubResource( 9 )
+
+[node name="left_resetter" type="Area2D" parent="."]
+visible = false
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="left_resetter"]
+position = Vector2( 18590.8, -16.2576 )
+shape = SubResource( 10 )
+
+[node name="Access range" type="Area2D" parent="."]
+visible = false
+rotation = 1.5708
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Access range"]
+position = Vector2( 7.25085, -6.85242 )
+shape = SubResource( 11 )
+
+[node name="ShakingCamera" parent="." instance=ExtResource( 14 )]
+
+[node name="gun" parent="." instance=ExtResource( 7 )]
+position = Vector2( -1.18921, 44.0007 )
+
+[connection signal="timeout" from="Timer" to="." method="_on_Timer_timeout"]
+[connection signal="body_entered" from="right_resetter" to="." method="_on_right_resetter_body_entered"]
+[connection signal="body_entered" from="down_resetter" to="." method="_on_down_resetter_body_entered"]
+[connection signal="body_entered" from="left_resetter" to="." method="_on_left_resetter_body_entered"]
+[connection signal="area_entered" from="Access range" to="." method="_on_Access_range_area_entered"]
+[connection signal="area_exited" from="Access range" to="." method="_on_Access_range_area_exited"]

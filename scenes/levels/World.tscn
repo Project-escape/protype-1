@@ -1,0 +1,46 @@
+[gd_scene load_steps=7 format=2]
+
+[ext_resource path="res://scenes/characters/gameboy.tscn" type="PackedScene" id=1]
+[ext_resource path="res://assests/Environment/background.png" type="Texture" id=2]
+[ext_resource path="res://sounds/Down Hearted Blues 1923.wav" type="AudioStream" id=3]
+[ext_resource path="res://scenes/characters/bot1.tscn" type="PackedScene" id=4]
+[ext_resource path="res://scenes/levels/level 1 lights.tscn" type="PackedScene" id=5]
+[ext_resource path="res://scenes/characters/bot3.tscn" type="PackedScene" id=6]
+
+[node name="World" type="Node2D"]
+modulate = Color( 0.054902, 0.054902, 0.054902, 1 )
+
+[node name="background" type="Sprite" parent="."]
+position = Vector2( 11085.8, 9004.85 )
+scale = Vector2( 17.4615, 21.211 )
+z_index = -2
+texture = ExtResource( 2 )
+
+[node name="level 1 lights" parent="." instance=ExtResource( 5 )]
+position = Vector2( -823.389, 1367.97 )
+
+[node name="bg2" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 3 )
+volume_db = -5.0
+autoplay = true
+
+[node name="bot1" parent="." instance=ExtResource( 4 )]
+position = Vector2( 6656.63, 8197.47 )
+
+[node name="bot4" parent="." instance=ExtResource( 4 )]
+position = Vector2( 9681.52, 8373.59 )
+
+[node name="bot6" parent="." instance=ExtResource( 4 )]
+position = Vector2( 6050.2, 3357.19 )
+
+[node name="bot7" parent="." instance=ExtResource( 6 )]
+position = Vector2( 11974.3, 3281.35 )
+
+[node name="bot5" parent="." instance=ExtResource( 6 )]
+position = Vector2( 902.457, 3409.67 )
+
+[node name="bot8" parent="." instance=ExtResource( 6 )]
+position = Vector2( 6747.67, 9712.94 )
+
+[node name="gameboy" parent="." instance=ExtResource( 1 )]
+position = Vector2( 6937.47, 11026.5 )

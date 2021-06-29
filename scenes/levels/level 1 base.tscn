@@ -1,0 +1,155 @@
+[gd_scene load_steps=9 format=2]
+
+[ext_resource path="res://scenes/rooms/room 2.tscn" type="PackedScene" id=1]
+[ext_resource path="res://scenes/rooms/room 3.tscn" type="PackedScene" id=2]
+[ext_resource path="res://scenes/rooms/room 4.tscn" type="PackedScene" id=3]
+[ext_resource path="res://scenes/rooms/room 5.tscn" type="PackedScene" id=4]
+[ext_resource path="res://scenes/rooms/room 1.tscn" type="PackedScene" id=5]
+[ext_resource path="res://scenes/rooms/room 6.tscn" type="PackedScene" id=6]
+[ext_resource path="res://scenes/rooms/room 7.tscn" type="PackedScene" id=8]
+[ext_resource path="res://scenes/rooms/room 8.tscn" type="PackedScene" id=9]
+
+[node name="level 1 base" type="Node2D"]
+
+[node name="room 4" parent="." instance=ExtResource( 1 )]
+position = Vector2( 11786.8, 7970.24 )
+rotation = 1.5708
+
+[node name="room 20" parent="." instance=ExtResource( 5 )]
+position = Vector2( 6296.31, 11004.4 )
+
+[node name="room 25" parent="." instance=ExtResource( 8 )]
+position = Vector2( 10295.8, 914.067 )
+rotation = 1.5708
+
+[node name="room 21" parent="." instance=ExtResource( 4 )]
+position = Vector2( 13762.7, 8508.75 )
+rotation = 3.14159
+
+[node name="room 33" parent="." instance=ExtResource( 5 )]
+position = Vector2( 932.817, 3391.7 )
+
+[node name="room 17" parent="." instance=ExtResource( 6 )]
+position = Vector2( 13489.5, 1301.64 )
+rotation = 1.5708
+
+[node name="room 18" parent="." instance=ExtResource( 1 )]
+position = Vector2( 14970.4, 7721.74 )
+
+[node name="room 5" parent="." instance=ExtResource( 3 )]
+position = Vector2( 16511.5, 9715.4 )
+
+[node name="room 26" parent="." instance=ExtResource( 8 )]
+position = Vector2( 3577.78, 5790.18 )
+
+[node name="room 22" parent="." instance=ExtResource( 4 )]
+position = Vector2( 6820.01, 7810.03 )
+rotation = 4.71239
+
+[node name="room 23" parent="." instance=ExtResource( 6 )]
+position = Vector2( 11784.9, 4812.99 )
+
+[node name="room 31" parent="." instance=ExtResource( 9 )]
+position = Vector2( 1382.59, 6851.38 )
+
+[node name="room 7" parent="." instance=ExtResource( 3 )]
+position = Vector2( 8052.34, 9006.28 )
+rotation = 1.5708
+
+[node name="room 8" parent="." instance=ExtResource( 2 )]
+position = Vector2( 6311.17, 806.606 )
+rotation = 1.5708
+
+[node name="room 28" parent="." instance=ExtResource( 8 )]
+position = Vector2( 10485.2, 5820.39 )
+rotation = 1.5708
+
+[node name="room 32" parent="." instance=ExtResource( 9 )]
+position = Vector2( 13745.9, 1403.72 )
+
+[node name="room 9" parent="." instance=ExtResource( 5 )]
+position = Vector2( 2765.83, 7921 )
+
+[node name="room 39" parent="." instance=ExtResource( 8 )]
+position = Vector2( 9755.02, 10706.1 )
+rotation = 1.5708
+
+[node name="room 40" parent="." instance=ExtResource( 9 )]
+position = Vector2( 16408.7, 12117.2 )
+rotation = 3.14159
+
+[node name="room 38" parent="." instance=ExtResource( 4 )]
+position = Vector2( 10684.8, 4828.39 )
+rotation = -1.5708
+
+[node name="room 10" parent="." instance=ExtResource( 1 )]
+position = Vector2( 11127.3, 11088.6 )
+
+[node name="room 27" parent="." instance=ExtResource( 8 )]
+position = Vector2( 8731.39, 9095.44 )
+
+[node name="room 11" parent="." instance=ExtResource( 2 )]
+position = Vector2( 14829.5, 5680.43 )
+rotation = 1.5708
+
+[node name="room 12" parent="." instance=ExtResource( 4 )]
+position = Vector2( 14786.1, 3747.99 )
+
+[node name="room 13" parent="." instance=ExtResource( 6 )]
+position = Vector2( 15197.9, 10820.5 )
+rotation = 3.14159
+
+[node name="room 14" parent="." instance=ExtResource( 3 )]
+position = Vector2( 2530.58, 5789.23 )
+rotation = 3.14159
+
+[node name="room 15" parent="." instance=ExtResource( 2 )]
+position = Vector2( 17790.8, 10773.8 )
+rotation = 1.5708
+
+[node name="room 16" parent="." instance=ExtResource( 3 )]
+position = Vector2( 2763.27, 10919.3 )
+rotation = 4.71239
+
+[node name="room 19" parent="." instance=ExtResource( 4 )]
+position = Vector2( 4938.13, 10549.5 )
+rotation = 1.5708
+
+[node name="room 1" parent="." instance=ExtResource( 5 )]
+position = Vector2( 2264.52, 2144.47 )
+
+[node name="room 2" parent="." instance=ExtResource( 1 )]
+position = Vector2( 5604.26, 4774.8 )
+
+[node name="room 3" parent="." instance=ExtResource( 2 )]
+position = Vector2( 6317.02, 2566.27 )
+rotation = 1.5708
+
+[node name="room 6" parent="." instance=ExtResource( 6 )]
+position = Vector2( 6308.57, 7804.05 )
+rotation = 1.5708
+
+[node name="room 24" parent="." instance=ExtResource( 5 )]
+position = Vector2( 8696.56, 4841.3 )
+
+[node name="room 37" parent="." instance=ExtResource( 6 )]
+position = Vector2( 7429.85, 4625.14 )
+rotation = -1.5708
+
+[node name="room 29" parent="." instance=ExtResource( 9 )]
+position = Vector2( 2614.33, 3452.95 )
+
+[node name="room 34" parent="." instance=ExtResource( 2 )]
+position = Vector2( 208.488, 2046.23 )
+
+[node name="room 35" parent="." instance=ExtResource( 1 )]
+position = Vector2( 16722.3, 4398.6 )
+rotation = -1.5708
+
+[node name="room 30" parent="." instance=ExtResource( 9 )]
+position = Vector2( 4906.29, 930.942 )
+rotation = 1.5708
+
+[node name="room 36" parent="." instance=ExtResource( 3 )]
+position = Vector2( 17026.5, 5782.47 )
+rotation = 1.5708

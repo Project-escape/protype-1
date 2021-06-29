@@ -1,0 +1,57 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://scenes/levels/level 1 objects.tscn" type="PackedScene" id=1]
+[ext_resource path="res://scenes/machines/weapon_box1.tscn" type="PackedScene" id=2]
+[ext_resource path="res://scenes/machines/portal.tscn" type="PackedScene" id=3]
+[ext_resource path="res://scenes/levels/level 1 chests.gd" type="Script" id=4]
+
+[node name="level 1 chests" type="Node2D"]
+script = ExtResource( 4 )
+
+[node name="level 1 objects" parent="." instance=ExtResource( 1 )]
+position = Vector2( 232.33, 83.6406 )
+
+[node name="weapon_box3" parent="." instance=ExtResource( 2 )]
+position = Vector2( 5403.28, 6600.05 )
+
+[node name="weapon_box2" parent="." instance=ExtResource( 2 )]
+position = Vector2( 2472.52, 3546.45 )
+
+[node name="weapon_box1" parent="." instance=ExtResource( 2 )]
+position = Vector2( 1150.14, 2298.2 )
+
+[node name="weapon_box5" parent="." instance=ExtResource( 2 )]
+position = Vector2( 15247.1, 10008.2 )
+
+[node name="weapon_box6" parent="." instance=ExtResource( 2 )]
+position = Vector2( 11767.6, 11241.8 )
+
+[node name="weapon_box7" parent="." instance=ExtResource( 2 )]
+position = Vector2( 16523.5, 11334.6 )
+
+[node name="weapon_box8" parent="." instance=ExtResource( 2 )]
+position = Vector2( 7958.68, 3700.58 )
+
+[node name="weapon_box9" parent="." instance=ExtResource( 2 )]
+position = Vector2( 6248.55, 4930.38 )
+
+[node name="weapon_box10" parent="." instance=ExtResource( 2 )]
+position = Vector2( 10909.5, 11591.4 )
+
+[node name="weapon_box11" parent="." instance=ExtResource( 2 )]
+position = Vector2( 7152.22, 3460.61 )
+
+[node name="weapon_box12" parent="." instance=ExtResource( 2 )]
+position = Vector2( 10542.3, 9907.13 )
+
+[node name="portal" parent="." instance=ExtResource( 3 )]
+position = Vector2( 2009.13, 7902.42 )
+
+[node name="weapon_box13" parent="." instance=ExtResource( 2 )]
+position = Vector2( 8850.66, 9898 )
+
+[node name="weapon_box14" parent="." instance=ExtResource( 2 )]
+position = Vector2( 3841.59, 11442.2 )
+
+[node name="weapon_box4" parent="." instance=ExtResource( 2 )]
+position = Vector2( 2605.67, 11139.6 )

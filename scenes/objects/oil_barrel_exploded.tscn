@@ -1,0 +1,23 @@
+[gd_scene load_steps=3 format=2]
+
+[sub_resource type="StreamTexture" id=2]
+flags = 4
+load_path = "res://.import/toxic can broken.png-8d8e9c1743e98459747192a4fc3fae5a.stex"
+
+[sub_resource type="OccluderPolygon2D" id=1]
+polygon = PoolVector2Array( -109.5, -2, -40.5, -30.5, -24.5, -30.5, 28.5, -7.5, 44.5, 19.5, 51, 49.5, 60.5, 47.5, 71, 48, 85, 14.5, 108, 22.5, 109, 167, -108.5, 167 )
+
+[node name="oil_barrel_exploded" type="Node2D"]
+
+[node name="RigidBody2D2" type="RigidBody2D" parent="."]
+
+[node name="toxic can broken" type="Sprite" parent="RigidBody2D2"]
+position = Vector2( 0.174965, 69.0892 )
+texture = SubResource( 2 )
+
+[node name="LightOccluder2D" type="LightOccluder2D" parent="RigidBody2D2"]
+occluder = SubResource( 1 )
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="RigidBody2D2"]
+build_mode = 1
+polygon = PoolVector2Array( -110.1, -2.34539, -38.8279, -29.9632, -24.1281, -29.9632, 28.435, -7.69078, 43.1348, 16.8089, 49.3711, 43.0904, 52.0438, 51.554, 62.7346, 47.9904, 71.6436, 49.3267, 84.1161, 14.1362, 106.834, 22.1543, 108.17, 22.1543, 109.952, 167.927, -109.209, 167.481 )

@@ -1,0 +1,66 @@
+[gd_scene load_steps=9 format=2]
+
+[ext_resource path="res://assests/Effects/Layer 0.png" type="Texture" id=1]
+[ext_resource path="res://assests/Objects/lamp3.png" type="Texture" id=2]
+[ext_resource path="res://scenes/objects/lamp_3.gd" type="Script" id=3]
+[ext_resource path="res://sounds/light.wav" type="AudioStream" id=5]
+[ext_resource path="res://sounds/Light Bulb Breaking.wav" type="AudioStream" id=6]
+
+[sub_resource type="CircleShape2D" id=1]
+
+[sub_resource type="CircleShape2D" id=2]
+radius = 432.163
+
+[sub_resource type="CircleShape2D" id=3]
+radius = 1703.17
+
+[node name="lamp_3" type="Node2D"]
+script = ExtResource( 3 )
+
+[node name="pin" type="StaticBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="pin"]
+position = Vector2( -0.590576, -326.258 )
+shape = SubResource( 1 )
+
+[node name="lamp" type="RigidBody2D" parent="pin"]
+
+[node name="Light2D" type="Light2D" parent="pin/lamp"]
+visible = false
+texture = ExtResource( 1 )
+color = Color( 1, 0.968627, 0.47451, 1 )
+energy = 3.0
+shadow_enabled = true
+
+[node name="lamp3" type="Sprite" parent="pin/lamp"]
+texture = ExtResource( 2 )
+
+[node name="Area2D" type="Area2D" parent="pin/lamp"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="pin/lamp/Area2D"]
+shape = SubResource( 2 )
+
+[node name="Area2D2" type="Area2D" parent="pin/lamp"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="pin/lamp/Area2D2"]
+visible = false
+shape = SubResource( 3 )
+
+[node name="on" type="AudioStreamPlayer2D" parent="pin/lamp"]
+stream = ExtResource( 5 )
+
+[node name="break" type="AudioStreamPlayer2D" parent="pin/lamp"]
+stream = ExtResource( 6 )
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="pin/lamp"]
+polygon = PoolVector2Array( -20.6134, -67.5907, -19.3521, -46.9888, -51.7266, 34.5782, -58.8742, 35.8395, -50.8857, 50.1348, -36.5905, 61.4869, -16.8294, 73.2594, -1.2728, 74.9412, 14.7042, 71.5776, 30.2608, 64.8504, 45.3969, 54.3392, 57.1695, 42.9871, 58.4308, 36.26, 53.3855, 36.6804, 20.5905, -47.8297, 20.5905, -64.6476, 11.3406, -74.3179, 0.829437, -75.1588, -10.1022, -73.8975 )
+
+[node name="PinJoint2D" type="PinJoint2D" parent="pin/lamp"]
+position = Vector2( 0, -327.374 )
+node_a = NodePath("..")
+node_b = NodePath("../..")
+disable_collision = false
+softness = 2.0
+
+[connection signal="body_entered" from="pin/lamp/Area2D" to="." method="_on_Area2D_body_entered"]
+[connection signal="body_exited" from="pin/lamp/Area2D2" to="." method="_on_Area2D2_body_exited"]

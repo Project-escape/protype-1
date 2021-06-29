@@ -1,0 +1,65 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://scenes/levels/level 1 chests.tscn" type="PackedScene" id=1]
+[ext_resource path="res://scenes/objects/lamp_1.tscn" type="PackedScene" id=2]
+[ext_resource path="res://scenes/objects/lamp_2.tscn" type="PackedScene" id=3]
+[ext_resource path="res://scenes/objects/lamp_3.tscn" type="PackedScene" id=4]
+
+[node name="level 1 lights" type="Node2D"]
+
+[node name="level 1 chests" parent="." instance=ExtResource( 1 )]
+position = Vector2( 213.667, 554.748 )
+
+[node name="lamp_2" parent="." instance=ExtResource( 2 )]
+position = Vector2( 17502.9, 1831.14 )
+
+[node name="lamp_3" parent="." instance=ExtResource( 2 )]
+position = Vector2( 8706.94, 5105.82 )
+
+[node name="lamp_15" parent="." instance=ExtResource( 4 )]
+position = Vector2( 8789.42, 6422.79 )
+
+[node name="lamp_16" parent="." instance=ExtResource( 4 )]
+position = Vector2( 3423, 9532.94 )
+
+[node name="lamp_17" parent="." instance=ExtResource( 4 )]
+position = Vector2( 6335.87, 11244.7 )
+
+[node name="lamp_18" parent="." instance=ExtResource( 4 )]
+position = Vector2( 2281.9, 1644.03 )
+
+[node name="lamp_4" parent="." instance=ExtResource( 2 )]
+position = Vector2( 14255.3, 11408 )
+
+[node name="lamp_5" parent="." instance=ExtResource( 2 )]
+position = Vector2( 14865.5, 5052.57 )
+
+[node name="lamp_6" parent="." instance=ExtResource( 2 )]
+position = Vector2( 18093.6, 8008.89 )
+
+[node name="lamp_7" parent="." instance=ExtResource( 2 )]
+position = Vector2( 2499.05, 4886.9 )
+
+[node name="lamp_8" parent="." instance=ExtResource( 3 )]
+position = Vector2( 2268.22, 7036.41 )
+
+[node name="lamp_10" parent="." instance=ExtResource( 3 )]
+position = Vector2( 16734.5, 10448 )
+
+[node name="lamp_11" parent="." instance=ExtResource( 3 )]
+position = Vector2( 6701.38, 8099.14 )
+
+[node name="lamp_12" parent="." instance=ExtResource( 3 )]
+position = Vector2( 5957.59, 2147.36 )
+
+[node name="lamp_9" parent="." instance=ExtResource( 2 )]
+position = Vector2( 9116.84, 8114.51 )
+
+[node name="lamp_13" parent="." instance=ExtResource( 2 )]
+position = Vector2( 11501.7, 8281.29 )
+
+[node name="lamp_1" parent="." instance=ExtResource( 3 )]
+position = Vector2( 5652.01, 4977.14 )
+
+[node name="lamp_14" parent="." instance=ExtResource( 4 )]
+position = Vector2( 12462.2, 3429 )
